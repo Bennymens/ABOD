@@ -1,0 +1,612 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/main/style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left-group">
+        <div
+          class="navbar-section navbar-logo"
+          style="display: flex; align-items: center; gap: 18px"
+        >
+          <a href="/">
+            <img
+              src="{% static 'main/img/logo.jpg' %}"
+              alt="Company Logo"
+              style="height: 40px"
+            />
+          </a>
+        </div>
+        <ul class="navbar-section navbar-center">
+          <li><a href="/markets/">Markets</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/insights/">Insights</a></li>
+        </ul>
+      </div>
+      <ul class="navbar-section navbar-right">
+        <li><a href="/about/">About</a></li>
+        <li><a href="/careers/">Careers</a></li>
+        <li><a href="/news/">News</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li class="language-dropdown">
+          <a href="#" title="Language" class="icon-link" id="lang-toggle">
+            <!-- Globe SVG icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="12" cy="12" r="10" stroke="#333" stroke-width="2" />
+              <ellipse
+                cx="12"
+                cy="12"
+                rx="4"
+                ry="10"
+                stroke="#333"
+                stroke-width="2"
+              />
+              <line
+                x1="2"
+                y1="12"
+                x2="22"
+                y2="12"
+                stroke="#333"
+                stroke-width="2"
+              />
+            </svg>
+          </a>
+          <ul class="lang-menu" id="lang-menu">
+            <li><a href="?lang=en">English</a></li>
+            <li><a href="?lang=fr">French</a></li>
+            <li><a href="?lang=de">German</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" title="Search" class="icon-link">
+            <!-- Magnifying glass SVG icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="11" cy="11" r="7" stroke="#333" stroke-width="2" />
+              <line
+                x1="16.5"
+                y1="16.5"
+                x2="21"
+                y2="21"
+                stroke="#333"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <!-- Hamburger menu for mobile -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <ul class="mobile-nav-links">
+        <li><a href="/markets/">Markets</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/projects/">Projects</a></li>
+        <li><a href="/insights/">Insights</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/careers/">Careers</a></li>
+        <li><a href="/news/">News</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <div class="mobile-search">
+        <form action="{% url 'search' %}" method="get">
+          <input type="text" name="q" placeholder="Search..." />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <div class="mobile-language">
+        <a href="?lang=en">English</a>
+        <a href="?lang=fr">French</a>
+        <a href="?lang=de">German</a>
+      </div>
+    </div>
+
+    <form
+      id="search-bar"
+      class="search-bar"
+      action="{% url 'search' %}"
+      method="get"
+    >
+      <input type="text" name="q" placeholder="Search..." required />
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="tagline-below-navbar" id="dynamic-tagline">
+      we are making innovation sustainable
+    </div>
+
+    <!-- Large rounded rectangle with image -->
+    <div class="large-rounded-rectangle slide-up">
+      <img
+        src="{% static 'main/img/hero.jpg' %}"
+        alt="Showcase"
+        class="rectangle-image"
+      />
+    </div>
+
+    <h2 class="below-rectangle-header slide-up">
+      Engineering for people and the planet
+    </h2>
+    <p class="below-rectangle-subtext slide-up">
+      Our experts are leading the way
+    </p>
+    <a href="/Servi/" class="below-rectangle-link slide-up">Services</a>
+
+    <h2 class="section-header slide-up">Building Informatioin Modeling</h2>
+    <p class="section-subtext slide-up">
+      Creating and managing digital information about built assets, from design
+      <br />and construction through to operatioin and maintenance.
+    </p>
+
+    <!-- 4 Cards below the building section -->
+    <div
+      class="four-cards-grid slide-up"
+      style="
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-auto-rows: 100px;
+        gap: 30px;
+        max-width: 96vw;
+        margin: 40px auto 0 auto;
+        padding: 0 2vw;
+        justify-items: center;
+      "
+    >
+      <div
+        class="card masonry-card"
+        style="
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+          grid-row-end: span 5;
+        "
+      >
+        <img
+          src="{% static 'main/img/chisinau-arena-sunset-moldova.jpg' %}"
+          alt="Card 1"
+          style="width: 100%; height: 500px; object-fit: cover"
+        />
+      </div>
+      <div
+        class="card masonry-card"
+        style="
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+          grid-row-end: span 6;
+        "
+      >
+        <img
+          src="{% static 'main/img/low-angle-red-geometrical-structure-blue-sky.jpg' %}"
+          alt="Card 2"
+          style="width: 100%; height: 600px; object-fit: cover"
+        />
+      </div>
+      <div
+        class="card masonry-card"
+        style="
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+          grid-row-end: span 4;
+          position: relative;
+        "
+      >
+        <img
+          src="{% static 'main/img/looking-up.jpg' %}"
+          alt="Card 3"
+          style="width: 100%; height: 400px; object-fit: cover"
+        />
+        <div
+          class="card-overlay"
+          style="
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            text-align: center;
+          "
+        >
+          <a
+            href="/issues/"
+            style="
+              color: white;
+              text-decoration: none;
+              font-family: 'Georgia Pro', Georgia, serif;
+              font-size: 1.15em;
+              opacity: 1;
+            "
+            >Issues</a
+          >
+          <p
+            style="
+              font-size: 0.9em;
+              margin-top: 5px;
+              font-family: 'Georgia Pro', Georgia, serif;
+            "
+          >
+            Our experts are leading the way in sustainable engineering,
+            combining innovation with environmental responsibility to create
+            structures that stand the test of time.
+          </p>
+        </div>
+      </div>
+      <div
+        class="card masonry-card"
+        style="
+          border-radius: 12px;
+          overflow: hidden;
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+          grid-row-end: span 6;
+        "
+      >
+        <img
+          src="{% static 'main/img/clear-glass-walled-building-blue-sky.jpg' %}"
+          alt="Clear Glass Walled Building Blue Sky"
+          style="width: 100%; height: 550px; object-fit: cover"
+        />
+      </div>
+      <!-- Additional links around the cards -->
+      <div class="card-link" style="text-align: center; padding: 20px">
+        <a
+          href="/news/"
+          style="
+            opacity: 0.45;
+            text-decoration: none;
+            color: #222;
+            font-family: 'Georgia Pro', Georgia, serif;
+            font-size: 0.9em;
+          "
+          >News</a
+        >
+      </div>
+      <div class="card-link" style="text-align: center; padding: 20px">
+        <a
+          href="/issues/"
+          style="
+            opacity: 0.45;
+            text-decoration: none;
+            color: #222;
+            font-family: 'Georgia Pro', Georgia, serif;
+            font-size: 0.9em;
+          "
+          >Issues</a
+        >
+        <p
+          style="
+            font-size: 2em;
+            color: #222;
+            margin-top: 5px;
+            font-family: 'Georgia Pro', Georgia, serif;
+          "
+        >
+          Our experts are leading the way in sustainable engineering.
+        </p>
+      </div>
+      <div class="card-link" style="text-align: center; padding: 20px">
+        <a
+          href="/projects/"
+          style="
+            opacity: 0.45;
+            text-decoration: none;
+            color: #222;
+            font-family: 'Georgia Pro', Georgia, serif;
+            font-size: 0.9em;
+          "
+          >Projects</a
+        >
+        <p
+          style="
+            font-size: 2em;
+            color: #222;
+            margin-top: 5px;
+            font-family: 'Georgia Pro', Georgia, serif;
+          "
+        >
+          Discover our innovative projects shaping the future.
+        </p>
+      </div>
+    </div>
+
+    <!-- OUR WORK section -->
+    <div class="our-work-section slide-up">
+      <h2 class="our-work-header">Our Work</h2>
+      <a href="/projects/" class="see-projects-button">See Projects →</a>
+    </div>
+    <p class="section-subtext slide-up">
+      Showcasing our latest projects and achievements in engineering and
+      sustainability.
+    </p>
+
+    <!-- Work Showcase Cards -->
+    <div class="work-showcase slide-up">
+      <div class="work-images">
+        <img
+          src="{% static 'main/img/chisinau-arena-sunset-moldova.jpg' %}"
+          alt="Urban Development Project"
+        />
+        <img
+          src="{% static 'main/img/low-angle-red-geometrical-structure-blue-sky.jpg' %}"
+          alt="Innovative Engineering"
+        />
+        <img
+          src="{% static 'main/img/looking-up.jpg' %}"
+          alt="Sustainable Architecture"
+        />
+        <img
+          src="{% static 'main/img/clear-glass-walled-building-blue-sky.jpg' %}"
+          alt="Modern Construction"
+        />
+      </div>
+      <div class="work-texts">
+        <div class="work-text">
+          <h3>Urban Development</h3>
+          <p>
+            Creating sustainable urban spaces that blend innovation with
+            community needs.
+          </p>
+        </div>
+        <div class="work-text">
+          <h3>Innovative Engineering</h3>
+          <p>
+            Advancing engineering solutions for complex challenges in modern
+            construction.
+          </p>
+        </div>
+        <div class="work-text">
+          <h3>Sustainable Architecture</h3>
+          <p>
+            Designing buildings that harmonize with the environment and future
+            generations.
+          </p>
+        </div>
+        <div class="work-text">
+          <h3>Modern Construction</h3>
+          <p>
+            Implementing cutting-edge techniques for efficient and resilient
+            structures.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="our-people-header slide-up">Our People</h2>
+    <p class="people-subtext slide-up">
+      We’re a diverse and growing community of tenacious problem-solvers, daring
+      <br />designers, creative coders, imaginative engineers, insightful
+      economists, inventive acousticians, and experts in many other disciplines.
+    </p>
+
+    <!-- Staff Showcase -->
+    <div class="staff-showcase slide-up">
+      <div class="staff-images">
+        <img
+          src="{% static 'main/img/chisinau-arena-sunset-moldova.jpg' %}"
+          alt="John Doe"
+        />
+        <img
+          src="{% static 'main/img/low-angle-red-geometrical-structure-blue-sky.jpg' %}"
+          alt="Jane Smith"
+        />
+        <img src="{% static 'main/img/looking-up.jpg' %}" alt="Mike Johnson" />
+        <img
+          src="{% static 'main/img/clear-glass-walled-building-blue-sky.jpg' %}"
+          alt="Sarah Lee"
+        />
+      </div>
+      <div class="staff-texts">
+        <div class="staff-text">
+          <h3>John Doe</h3>
+          <p class="position">Lead Engineer</p>
+          <p class="bio">
+            John is a seasoned engineer with over 15 years of experience in
+            sustainable design and innovative construction solutions.
+          </p>
+        </div>
+        <div class="staff-text">
+          <h3>Jane Smith</h3>
+          <p class="position">Creative Designer</p>
+          <p class="bio">
+            Jane brings creativity and vision to every project, specializing in
+            user-centered design and architectural aesthetics.
+          </p>
+        </div>
+        <div class="staff-text">
+          <h3>Mike Johnson</h3>
+          <p class="position">Project Manager</p>
+          <p class="bio">
+            Mike ensures seamless project execution, coordinating teams and
+            delivering high-quality results on time and within budget.
+          </p>
+        </div>
+        <div class="staff-text">
+          <h3>Sarah Lee</h3>
+          <p class="position">Sustainability Expert</p>
+          <p class="bio">
+            Sarah focuses on environmental impact, integrating green
+            technologies and practices into all our engineering endeavors.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const taglines = [
+        "we are making innovation sustainable",
+        "we are designing structures for life",
+        "we are engineering the change we want to see",
+      ];
+
+      function animateTaglineChange(newText) {
+        const taglineEl = document.getElementById("dynamic-tagline");
+        // Animate out (move up and fade out)
+        taglineEl.style.transition = "transform 0.3s, opacity 0.3s";
+        taglineEl.style.transform = "translateY(-40px)";
+        taglineEl.style.opacity = "0";
+        setTimeout(() => {
+          taglineEl.textContent = newText;
+          // Animate in (drop down and fade in)
+          taglineEl.style.transition = "none";
+          taglineEl.style.transform = "translateY(40px)";
+          setTimeout(() => {
+            taglineEl.style.transition =
+              "transform 0.4s cubic-bezier(.23,1.01,.32,1), opacity 0.4s";
+            taglineEl.style.transform = "translateY(0)";
+            taglineEl.style.opacity = "1";
+          }, 10);
+        }, 300);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const taglineEl = document.getElementById("dynamic-tagline");
+        // Pick a random tagline different from the default
+        let current = taglineEl.textContent.trim();
+        let options = taglines.filter((t) => t !== current);
+        let newTagline = options[Math.floor(Math.random() * options.length)];
+        animateTaglineChange(newTagline);
+
+        // Optional: animate on logo click if you want instant change without reload
+        document
+          .querySelector(".navbar-logo a")
+          .addEventListener("click", function (e) {
+            if (window.location.pathname === "/") {
+              e.preventDefault();
+              let options = taglines.filter(
+                (t) => t !== taglineEl.textContent.trim()
+              );
+              let newTagline =
+                options[Math.floor(Math.random() * options.length)];
+              animateTaglineChange(newTagline);
+            }
+          });
+
+        // Show search bar with drop-down animation
+        document
+          .querySelector('.icon-link[title="Search"]')
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            const bar = document.getElementById("search-bar");
+            if (!bar.classList.contains("active")) {
+              bar.classList.add("active");
+              bar.querySelector("input").focus();
+            } else {
+              bar.classList.remove("active");
+            }
+          });
+
+        // Language dropdown toggle
+        const langToggle = document.getElementById("lang-toggle");
+        const langMenu = document.getElementById("lang-menu");
+        if (langToggle && langMenu) {
+          langToggle.addEventListener("click", function (e) {
+            e.preventDefault();
+            langMenu.classList.toggle("show");
+          });
+          document.addEventListener("click", function (e) {
+            if (
+              !langToggle.contains(e.target) &&
+              !langMenu.contains(e.target)
+            ) {
+              langMenu.classList.remove("show");
+            }
+          });
+        }
+
+        // Work showcase hover animation
+        const workImages = document.querySelectorAll(".work-images img");
+        const workTexts = document.querySelectorAll(".work-text");
+        workImages.forEach((img, index) => {
+          img.addEventListener("mouseenter", () => {
+            workTexts[index].classList.add("animate");
+          });
+          img.addEventListener("mouseleave", () => {
+            workTexts[index].classList.remove("animate");
+          });
+        });
+
+        // Staff showcase hover animation
+        const staffImages = document.querySelectorAll(".staff-images img");
+        const staffTexts = document.querySelectorAll(".staff-text");
+        staffImages.forEach((img, index) => {
+          img.addEventListener("mouseenter", () => {
+            staffTexts[index].classList.add("animate");
+          });
+          img.addEventListener("mouseleave", () => {
+            staffTexts[index].classList.remove("animate");
+          });
+        });
+
+        // Scroll animation observer
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        }, observerOptions);
+
+        // Observe all slide-up elements
+        document.querySelectorAll(".slide-up").forEach((el) => {
+          observer.observe(el);
+        });
+
+        // Hamburger menu toggle
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobile-menu");
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          mobileMenu.classList.toggle("open");
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll(".mobile-nav-links a").forEach((link) => {
+          link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            mobileMenu.classList.remove("open");
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
