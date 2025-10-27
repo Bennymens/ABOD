@@ -116,32 +116,13 @@
     padding: 20px;
   }
 }
-.issue-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-/* Tagline below navbar */
-.tagline-below-navbar {
-  font-family: "Georgia Pro", Georgia, serif;
-  font-size: 4em;
-  font-weight: 500;
-  color: #222;
-  margin: 7px auto 6px auto;
-  letter-spacing: 0.2px;
-  opacity: 1;
-  transform: translateY(0);
-  transition: transform 0.4s cubic-bezier(0.23, 1.01, 0.32, 1), opacity 0.4s;
-  will-change: transform, opacity;
-  width: 96vw;
-  max-width: 1800px;
-  display: block;
-  text-align: left;
-  padding-left: 2vw;
-  box-sizing: border-box;
-}
+/* end small-screen layout tweaks */
 
 /* Place your CSS here. Example: */
+html,
 body {
+  margin: 0;
+  padding: 0;
   background: #fdfdfd;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 15px;
@@ -1044,4 +1025,420 @@ h6 {
     gap: 15px;
     margin-top: 20px;
   }
+}
+
+/* Updated Issues Section Styles - Smaller Cards */
+.issues-section {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 4rem 2rem 2rem;
+  /* add space above to separate from previous section */
+  margin-top: 6rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.issues-header {
+  /* match Our People heading alignment */
+  max-width: 96vw;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 2vw;
+}
+
+/* Nudge the heading block slightly left so it better aligns with the cards */
+.issues-header .header-content {
+  padding-left: -20rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.issues-title {
+  font-family: "Georgia Pro", Georgia, serif;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #f0f0f0;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.issues-description {
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #cccccc;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+.view-more-btn {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.view-more-btn:hover {
+  background-color: #444444;
+  transform: translateY(-2px);
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.view-more-btn:hover .arrow-icon {
+  transform: translateX(2px);
+}
+
+.issues-content {
+  display: grid;
+  /* responsive columns that keep cards centered: auto-fit with a sensible min */
+  grid-template-columns: repeat(auto-fit, minmax(420px, 560px));
+  justify-content: center; /* center the grid columns inside the container */
+  justify-items: center; /* center items within each grid cell */
+  gap: 1.25rem;
+  padding: 2.5rem 2vw;
+  max-width: 96vw; /* match heading container */
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.issue-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  overflow: hidden; /* clip image to rounded corners */
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 360px; /* increased height */
+  position: relative;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.12);
+  padding-bottom: 180px; /* room for larger semi-circle */
+  width: 100%;
+  max-width: 560px;
+}
+
+.issue-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  padding: 1.5rem; /* increased padding */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.card-label {
+  font-size: 0.95rem; /* larger label for readability */
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-family: "Georgia Pro", Georgia, serif;
+  font-size: 1.8rem; /* larger title for emphasis */
+  font-weight: 500;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.card-image-wrapper {
+  height: 160px; /* increased image height */
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  clip-path: ellipse(100% 100% at 50% 0%);
+}
+
+.issue-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+/* Zoom the underlying full-card image when hovering the card */
+.issue-card:hover .card-fill {
+  transform: scale(1.08);
+}
+
+.card-orange {
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+  /* orange overlay for the card (covers image except semicircle) */
+  --issue-overlay: linear-gradient(
+    135deg,
+    rgba(230, 126, 34, 1) 0%,
+    rgba(211, 84, 0, 1) 100%
+  );
+}
+
+.card-red {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  /* red overlay */
+  --issue-overlay: linear-gradient(
+    135deg,
+    rgba(231, 76, 60, 1) 0%,
+    rgba(192, 57, 43, 1) 100%
+  );
+}
+
+.card-green {
+  background: linear-gradient(135deg, #8d998c 0%, #6b7b6b 100%);
+  /* gray overlay (used for the third card) */
+  --issue-overlay: linear-gradient(
+    135deg,
+    rgba(141, 153, 140, 1) 0%,
+    rgba(107, 123, 107, 1) 100%
+  );
+}
+
+.issue-card:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Circular image inside the card */
+.card-circle {
+  display: none;
+}
+
+.card-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* full-card image that sits under the color overlay */
+.card-fill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transition: transform 0.6s cubic-bezier(0.22, 0.9, 0.32, 1);
+  transform-origin: center center;
+}
+
+/* overlay covering the image but with a transparent semicircle at the bottom-right */
+.issue-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  /* color overlay is provided per-card via the --issue-overlay variable */
+  background: var(
+    --issue-overlay,
+    linear-gradient(135deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55))
+  );
+  /* mask out a circular hole near the bottom-right so image shows through */
+  /* much larger hole; moved higher (90%) so a larger semicircle shows */
+  -webkit-mask-image: radial-gradient(
+    circle 220px at calc(100% - 220px) 90%,
+    transparent 0 220px,
+    black 221px 100%
+  );
+  mask-image: radial-gradient(
+    circle 220px at calc(100% - 220px) 90%,
+    transparent 0 220px,
+    black 221px 100%
+  );
+  pointer-events: none;
+}
+
+.card-content {
+  position: relative;
+  z-index: 3; /* above overlay */
+}
+
+/* Ensure card has space for the floating circle */
+.issue-card {
+  padding-top: 24px; /* small offset so circle doesn't overlap the content too much */
+}
+
+.view-more-btn:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .issues-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .issues-title {
+    font-size: 3rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .view-more-btn {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .issues-section {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .issues-title {
+    font-size: 2.5rem;
+  }
+
+  .issues-description {
+    font-size: 1rem;
+  }
+
+  .card-content {
+    padding: 0.75rem;
+  }
+
+  .card-label {
+    font-size: 0.9rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-image-wrapper {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .issues-title {
+    font-size: 2rem;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+
+  .card-content {
+    padding: 0.5rem;
+  }
+
+  .card-image-wrapper {
+    height: 50px;
+  }
+}
+
+/* Animation for section load */
+.issues-section {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card hover animations */
+.issue-card {
+  animation: slideUp 0.6s ease-out;
+}
+
+.issue-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.issue-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.issue-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stronger overrides for issues images to ensure they're small and card-contained */
+.issues-section .card-image,
+.issues-section .card-image-wrapper img {
+  height: 100% !important;
+  max-height: none !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+.issues-section .issue-card {
+  min-height: 320px !important;
+  border-radius: 1.25rem !important;
+  overflow: hidden !important;
+}
+
+/* Full-bleed black container immediately after Our People */
+.black-section {
+  background: #000;
+  color: #fff;
+  /* full-bleed technique: expand outside centered page container */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 80px 0;
+}
+
+.black-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
