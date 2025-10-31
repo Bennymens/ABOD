@@ -104,6 +104,13 @@
       </div>
     </nav>
 
+    <!-- Tagline directly below the navbar (left-aligned on desktop) -->
+    <div class="tagline-below-navbar tagline-left slide-up">About Us</div>
+    <p class="below-rectangle-subtext below-rectangle-subtext-left slide-up">
+      Designing sustainable places and systems — making long-term,
+      people-centred change.
+    </p>
+
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobile-menu">
       <ul class="mobile-nav-links">
@@ -226,5 +233,40 @@
         </div>
       </div>
     </footer>
+
+    <!-- Small script to reveal slide-up elements if IntersectionObserver isn't wired -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        try {
+          // If IntersectionObserver is available, use it for nicer on-scroll reveal
+          if ("IntersectionObserver" in window) {
+            const obs = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    obs.unobserve(entry.target);
+                  }
+                });
+              },
+              { threshold: 0.08 }
+            );
+            document
+              .querySelectorAll(".slide-up")
+              .forEach((el) => obs.observe(el));
+          } else {
+            // Fallback: reveal all immediately
+            document
+              .querySelectorAll(".slide-up")
+              .forEach((el) => el.classList.add("visible"));
+          }
+        } catch (e) {
+          // Graceful fallback: reveal all
+          document
+            .querySelectorAll(".slide-up")
+            .forEach((el) => el.classList.add("visible"));
+        }
+      });
+    </script>
   </body>
 </html>
