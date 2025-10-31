@@ -1,1252 +1,230 @@
-
-
+{% load static %}
 <!DOCTYPE html>
-<html lang="en" data-is-preview-modal="false"
-    data-page-type="Landing Page">
-
-<head>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-    </script>
-
-        <script>
-            (function (w, d, s, l, i) {
-                w[l] = w[l] || []; w[l].push({
-                    'gtm.start':
-                        new Date().getTime(), event: 'gtm.js'
-                }); var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-TLH7JW8M');
-        </script>
-
+<html lang="en">
+  <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    
-
-<title>Insights - Arup</title>
-
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Arup",
-    "url": "https://www.arup.com/",
-    "logo": "https://www.arup.com/globalassets/images/site-assets/logo.svg",
-"sameAs": [
-  "https://www.facebook.com/ArupGroup/",
-  "https://www.instagram.com/arupgroup/",
-  "https://www.linkedin.com/company/arup/",
-  "https://www.youtube.com/@arupgroup"
-]}
-</script>
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-
-
-    <meta name="description" content="From ideas for net zero transport and decarbonising energy systems, to thinking on how infrastructure becomes more resilient to climate change, to the role of digital technologies and nature, discover how Arup&#x27;s experts are shaping a sustainable future." />
-
-<link href="https://www.arup.com/insights/" rel="canonical" />
-<link href="https://www.arup.com/insights/" hreflang="en" rel="alternate" /><link href="https://www.arup.com/en-us/insights/" hreflang="en-US" rel="alternate" />
-<link href="https://www.arup.com/insights/" hreflang="x-default" rel="alternate" />
-
-
-    <meta property="og:title" content="Insights" />
-    <meta name="twitter:title" content="Insights" />
-
-
-    <meta property="og:description" content="From ideas for net zero transport and decarbonising energy systems, to thinking on how infrastructure becomes more resilient to climate change, to the role of digital technologies and nature, discover how Arup&#x27;s experts are shaping a sustainable future." />
-    <meta name="twitter:description" content="From ideas for net zero transport and decarbonising energy systems, to thinking on how infrastructure becomes more resilient to climate change, to the role of digital technologies and nature, discover how Arup&#x27;s experts are shaping a sustainable future." />
-
-
-
-
-
-<meta property="og:type" content="website" />
-
-<meta name="robots" content="all">
-
-    <meta name="msvalidate.01" content="31B93E6B66BDA6C4FA355C8A29D62AC7" />
-    <meta name="yandex-verification" content="409978254d21a6be" />
-
-
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-
-    <link rel="preconnect" href="https://munchkin.marketo.net" />
-    <link rel="dns-prefetch" href="https://munchkin.marketo.net" />
-
-    <script>
-!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{src: "https://js.monitor.azure.com/scripts/b/ai.2.gbl.min.js", crossOrigin: "anonymous", cfg: { instrumentationKey:'dcc5bc40-9c47-4064-bad7-ca77e1e58a12', disableCookiesUsage: false }});
-</script>
-
-    <link href="/style.css" rel="stylesheet">
-
-    <script>
-        dataLayer.push({
-            'event': 'content_info',
-            'market': '',
-            'service': '',
-            'article_type': 'Insights landing page',
-            'submarket': '',
-            'country': '',
-            'theme': '',
-            'region': '',
-            'service_group': ''
-        });
-    </script>
-</head>
-
-<body class="">
-        <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLH7JW8M" height="0" width="0"
-                style="display:none;visibility:hidden" title="GTM"></iframe>
-        </noscript>
-
-
-
-
-    <header class="header js-intro-reveal" id="site-header" style="transform: translateY(0px);">
-        <div class="header__wrapper container">
-            <a class="header__skip-content" href="#main-content">Skip to content</a>
-            <div class="header__logo">
-                <a class="header__logo-anchor" aria-label="Homepage"
-                    href="/"><picture><source srcset="/globalassets/images/site-assets/logo.svg?width=105&quality=80 105w, /globalassets/images/site-assets/logo.svg?width=120&quality=80 120w, /globalassets/images/site-assets/logo.svg?width=150&quality=80 150w" sizes="(max-width: 0) 105px, (max-width: 1024px) 120px, 150px" /><img alt="Arup logo header" src="/globalassets/images/site-assets/logo.svg?width=150&quality=80" decoding="async" /></picture></a>
-            </div>
-                <nav class="header__main" aria-label="Main">
-                    <ul>
-                <li>
-                    <a class="menu__main--link" href="/markets/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Markets', 'nav_type': 'top_nav'});">
-                        Markets
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__main--link" href="/services/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Services', 'nav_type': 'top_nav'});">
-                        Services
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__main--link" href="/projects/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Projects', 'nav_type': 'top_nav'});">
-                        Projects
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__main--link" href="/insights/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Insights', 'nav_type': 'top_nav'});">
-                        Insights
-                    </a>
-                </li>
-                    </ul>
-                </nav>
-            <nav class="header__second" aria-label="Secondary">
-                <ul>
-                <li>
-                    <a class="menu__item--link" href="/about-us/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'About', 'nav_type': 'top_nav'});">
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__item--link" href="/careers/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Careers', 'nav_type': 'top_nav'});">
-                        Careers
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__item--link" href="/news/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'News', 'nav_type': 'top_nav'});">
-                        News
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__item--link" href="/contact-us/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Contact', 'nav_type': 'top_nav'});">
-                        Contact
-                    </a>
-                </li>
-                    <li class="dropdown">
-                            <span class="lang-search">
-                                <button class="menu__item--lang" aria-controls="lang-dropdown"
-                                    aria-expanded="false" aria-label="Language Selector">
-                                    <span class="menu__item--wrapper">
-                                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 21.0046C16.1926 21.0046 19.7156 18.1379 20.7157 14.2576M12 21.0046C7.80742 21.0046 4.28442 18.1379 3.2843 14.2576M12 21.0046C14.4853 21.0046 16.5 16.9752 16.5 12.0046C16.5 7.03408 14.4853 3.00464 12 3.00464M12 21.0046C9.51472 21.0046 7.5 16.9752 7.5 12.0046C7.5 7.03408 9.51472 3.00464 12 3.00464M12 3.00464C15.3652 3.00464 18.299 4.85158 19.8431 7.58709M12 3.00464C8.63481 3.00464 5.70099 4.85158 4.15692 7.58709M19.8431 7.58709C17.7397 9.40503 14.9983 10.5046 12 10.5046C9.00172 10.5046 6.26027 9.40503 4.15692 7.58709M19.8431 7.58709C20.5797 8.89207 21 10.3993 21 12.0046C21 12.7826 20.9013 13.5376 20.7157 14.2576M20.7157 14.2576C18.1334 15.6894 15.1619 16.5046 12 16.5046C8.8381 16.5046 5.86662 15.6894 3.2843 14.2576M3.2843 14.2576C3.09871 13.5376 3 12.7826 3 12.0046C3 10.3993 3.42032 8.89207 4.15692 7.58709" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </span>
-                                </button>
-                                <ul class="lang-dropdown" id="lang-dropdown" aria-hidden="true" role="navigation"
-                                    aria-label="Language Selector">
-                                    <span class="languages-area-title">Language</span>
-                                        <li>
-                                            <a class="lang-dropdown__anchor cta-focus selected" href="/LanguageSelector/SetNewLanguage?lang=en&amp;returnPage=37d08ccb-d1c2-4a62-9a09-cc59f01fa1a9">
-                                                <span>English</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="lang-dropdown__anchor cta-focus " href="/LanguageSelector/SetNewLanguage?lang=de&amp;returnPage=37d08ccb-d1c2-4a62-9a09-cc59f01fa1a9">
-                                                <span>Deutsch</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="lang-dropdown__anchor cta-focus " href="/LanguageSelector/SetNewLanguage?lang=fr&amp;returnPage=37d08ccb-d1c2-4a62-9a09-cc59f01fa1a9">
-                                                <span>fran&#xE7;ais</span>
-                                            </a>
-                                        </li>
-                                    <span class="regions-area-title">Regions</span>
-                                        <li>
-                                            <a class="lang-dropdown__anchor cta-focus " href="/LanguageSelector/SetNewLanguage?lang=en-US&amp;returnPage=37d08ccb-d1c2-4a62-9a09-cc59f01fa1a9">
-                                                <span>English (United States)</span>
-                                            </a>
-                                        </li>
-                                </ul>
-                            </span>
-                    <li>
-                        <button id="site-search-icon" aria-label="Search"
-                            aria-controls="js-site-search" aria-expanded="false" class="menu__item--search">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5 15L1 19" stroke="black" stroke-width="1.5" stroke-linejoin="round" />
-                                <path
-                                    d="M19 9C19 13.4183 15.4183 17 11 17C8.78703 17 6.78393 16.1015 5.33563 14.6493C3.89233 13.2022 3 11.2053 3 9C3 4.58172 6.58172 1 11 1C15.4183 1 19 4.58172 19 9Z"
-                                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </li>
-                    <li class="header__mobile-toggle">
-                        <button class="mobile-menu nav-toggle" aria-expanded="false" aria-controls="nav-dropdown"
-                            aria-label="Expand Menu">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 9H23" stroke="currentColor" stroke-width="1.5" />
-                                <path d="M1 15H23" stroke="currentColor" stroke-width="1.5" />
-                            </svg>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Markets — ABOD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'main/style.css' %}" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left-group">
+        <div
+          class="navbar-section navbar-logo"
+          style="display: flex; align-items: center; gap: 18px"
+        >
+          <a href="{% url 'home' %}">
+            <img
+              src="{% static 'main/img/logo.jpg' %}"
+              alt="Company Logo"
+              style="height: 40px"
+            />
+          </a>
         </div>
-        <div class="js-site-search-container"
-            data-placeholder-label="Search arup.com"
-            data-search-label="Search"
-            data-results-label="See all results for"
-            data-popular-label="Most popular results"
-            data-loading-label="Loading"
-            data-no-results-label="0 results found"
-            data-lang="en" data-suggestions-limit="10"
-            data-clear-label="Clear search"
-            data-api-url="/en/api/site" data-search-page-url="/search-results/">
-            <div id="js-site-search"></div>
-        </div>
-        <div class="nav-dropdown theme-surface-brand" id="nav-dropdown" aria-hidden="true">
-            <div class="header__submenu">
-                <div class="header__submenu--row-one">
-                    <svg width="104" height="28" viewBox="0 0 104 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M67.3743 28C61.4606 28 58.8979 25.2875 57.8976 23.6715C56.7532 21.8006 56.6052 19.2679 56.6052 17.2686V4.19218C56.6052 4.06577 56.6071 3.93931 56.6091 3.80895C56.6306 2.44578 56.652 1.15769 54.566 1.09053H53.9023V0H64.5957L64.6032 1.09843L64.4127 1.09645C63.6148 1.08855 63.0075 1.30389 62.5756 1.73653C62.064 2.25219 61.8032 3.07798 61.8032 4.19218V18.5764C61.8032 23.4463 63.8891 25.9157 68.0031 25.9157C70.3304 25.9157 72.2881 25.2184 73.5123 23.952C75.4911 21.8757 75.649 19.1849 75.649 15.8817V4.15269C75.649 2.41813 75.4795 1.0925 73.3388 1.0925H72.7823V0H80.6696V1.0925H80.3366C78.7567 1.0925 77.8422 1.59232 77.8422 4.15269V16.0813C77.8438 24.1022 74.4189 28 67.3743 28Z"
-                            fill="white" />
-                        <path
-                            d="M93.8556 27.4192H83.1523V26.3326L83.3333 26.3267C85.842 26.2536 85.9703 25.4397 85.9703 23.1005V4.17639C85.9703 1.74245 85.877 1.1656 83.4385 1.0925L83.2575 1.08657V0H94.1767C100.628 0 104.002 3.83857 104.002 7.6297C104.002 11.9681 100.192 15.3661 95.3287 15.3661L92.9196 15.3306V13.4103C92.9196 13.4103 93.8322 13.4004 94.1648 13.4004C97.1578 13.4004 98.6972 11.1028 98.6972 7.68305C98.6972 4.12106 96.4477 1.72666 93.1006 1.72666L90.9484 1.72073V23.5411C90.9484 25.8328 91.3568 26.2476 93.6766 26.3247L93.8576 26.3306V27.4192H93.8556Z"
-                            fill="white" />
-                        <path
-                            d="M54.5954 27.4192H46.8835L38.6325 14.6806V13.1258L38.7998 13.108C41.6935 12.7979 44.4102 11.1068 44.4102 7.28793C44.4102 4.08354 42.1392 1.84719 38.8874 1.84719H36.6612V23.5411C36.6612 25.9039 37.7296 26.139 39.2397 26.2101L39.4166 26.218V27.4172H28.9531V26.3148L29.1302 26.3049C31.3992 26.1765 31.7203 25.5996 31.7203 23.5391V3.87608C31.6366 1.44218 31.4887 1.13003 29.138 1.0925L28.9551 1.09053V0H40.2264C44.5249 0 49.5455 1.91828 49.5455 7.32746C49.5455 10.5516 47.6211 12.865 43.8223 14.2064L48.1038 20.6232C48.5706 21.3502 50.287 23.464 51.0558 24.3254C52.521 25.9256 53.5757 26.1469 54.2743 26.2931L54.5954 26.3622V27.4192Z"
-                            fill="white" />
-                        <path
-                            d="M27.0961 27.4192H16.8854V26.3484L17.0664 26.3425C18.3138 26.299 19.0863 26.0224 19.0863 24.7857C19.0863 24.2326 18.6602 23.15 18.4305 22.5671L16.7706 18.5369H7.54853L5.85357 22.4565C5.29117 23.7505 5.12771 24.2187 5.12771 24.8252C5.12771 25.7162 5.12771 26.3049 7.18072 26.3425L7.36367 26.3464V27.4212H0V26.3484L0.182925 26.3445C1.64242 26.3109 2.40136 25.5582 3.43274 23.1223L13.4215 0H14.4471L14.4957 0.114584L24.5137 24.0627C25.2357 25.8466 25.4069 26.2694 26.919 26.3326L27.098 26.3405V27.4192H27.0961ZM8.3055 16.6818H16.0233L12.25 7.38872L8.3055 16.6818Z"
-                            fill="white" />
-                    </svg>
-                    <button class="cta-secondary-variant menu__close modal__close" aria-expanded="false"
-                        aria-controls="nav-dropdown">
-                        <svg class="icon icon--rotate" viewBox="0 0 32 32" aria-hidden="true">
-                            <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-burger-close"></use>
-                        </svg>
-                        <span>
-                            Close
-                        </span>
-                    </button>
-                </div>
-                <div class="header__submenu--row-two">
-                    <div class="header__submenu-content-wrapper">
-                        <div class="left">
-                            <nav class="header__submenu--primary"
-                                aria-label="Main">
-                                <ul>
-                <li>
-                    <a class="menu__full--link" href="/markets.html"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Markets', 'nav_type': 'top_nav'});">
-                        Markets
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__full--link" href="/services.html"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Services', 'nav_type': 'top_nav'});">
-                        Services
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__full--link" href="/projects.html"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Projects', 'nav_type': 'top_nav'});">
-                        Projects
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__full--link" href="/insights.html"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Insights', 'nav_type': 'top_nav'});">
-                        Insights
-                    </a>
-                </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="right">
-                            <nav class="header__submenu--secondary"
-                                aria-label="Secondary">
-                                <ul>
-                <li>
-                    <a class="menu__full--link" href="/about.html"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'About', 'nav_type': 'top_nav'});">
-                        About
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__full--link" href="/careers.html"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Careers', 'nav_type': 'top_nav'});">
-                        Careers
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__full--link" href="/news.html"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'News', 'nav_type': 'top_nav'});">
-                        News
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__full--link" href="/contact.html"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Contact', 'nav_type': 'top_nav'});">
-                        Contact
-                    </a>
-                </li>
-                                </ul>
-                            </nav>
-                        </div>
+        <ul class="navbar-section navbar-center">
+          <li><a href="{% url 'markets' %}">Markets</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'projects' %}">Projects</a></li>
+          <li><a href="{% url 'insights' %}">Insights</a></li>
+        </ul>
+      </div>
+      <ul class="navbar-section navbar-right">
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'careers' %}">Careers</a></li>
+        <li><a href="{% url 'news' %}">News</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li class="language-dropdown">
+          <a href="#" title="Language" class="icon-link" id="lang-toggle">
+            <!-- Globe SVG icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="12" cy="12" r="10" stroke="#333" stroke-width="2" />
+              <ellipse
+                cx="12"
+                cy="12"
+                rx="4"
+                ry="10"
+                stroke="#333"
+                stroke-width="2"
+              />
+              <line
+                x1="2"
+                y1="12"
+                x2="22"
+                y2="12"
+                stroke="#333"
+                stroke-width="2"
+              />
+            </svg>
+          </a>
+          <ul class="lang-menu" id="lang-menu">
+            <li><a href="?lang=en">English</a></li>
+            <li><a href="?lang=fr">French</a></li>
+            <li><a href="?lang=de">German</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" title="Search" class="icon-link">
+            <!-- Magnifying glass SVG icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="11" cy="11" r="7" stroke="#333" stroke-width="2" />
+              <line
+                x1="16.5"
+                y1="16.5"
+                x2="21"
+                y2="21"
+                stroke="#333"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
 
-                            <div data-search-page-url="/search-results/"
-                                data-placeholder-label="Search arup.com"
-                                data-search-label="Search"
-                                data-results-label="See all results for"
-                                data-popular-label="Most popular results" data-suggestions-limit="10">
-                            </div>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <ul class="mobile-nav-links">
+        <li><a href="{% url 'markets' %}">Markets</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'projects' %}">Projects</a></li>
+        <li><a href="{% url 'insights' %}">Insights</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'careers' %}">Careers</a></li>
+        <li><a href="{% url 'news' %}">News</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+      <div class="mobile-search">
+        <form action="{% url 'search' %}" method="get">
+          <input type="text" name="q" placeholder="Search..." />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+      <div class="mobile-language">
+        <a href="?lang=en">English</a><a href="?lang=fr">French</a
+        ><a href="?lang=de">German</a>
+      </div>
+    </div>
 
-                    </div>
-                </div>
-                <div class="header__submenu--row-three">
-                    <ul>
-                <li>
-                    <a class="menu__item--link" href="/about-us/corporate-reports/modern-slavery-and-human-trafficking-statement/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Modern Slavery Statement', 'nav_type': 'top_nav'});">
-                        Modern Slavery Statement
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__item--link" href="/about-us/our-commitments/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Commitments', 'nav_type': 'top_nav'});">
-                        Commitments
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__item--link" href="/about-us/corporate-reports/legal/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Legal', 'nav_type': 'top_nav'});">
-                        Legal
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__item--link" href="/about-us/corporate-reports/policies/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Policies', 'nav_type': 'top_nav'});">
-                        Policies
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__item--link" href="/about-us/corporate-reports/privacy-at-arup/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Privacy', 'nav_type': 'top_nav'});">
-                        Privacy
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__item--link" href="/about-us/our-suppliers/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Suppliers', 'nav_type': 'top_nav'});">
-                        Suppliers
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__item--link" href="/cookies/"
-                        onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Cookies', 'nav_type': 'top_nav'});">
-                        Cookies
-                    </a>
-                </li>
-
-                    </ul>
-                </div>
-                <div class="header__submenu--row-four">
-                    <ul>
-                            <li>&#xA9;Arup 2025</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-
-        <div class="site-search__overlay"></div>
-    <main class="smooth-wrapper">
-        <div id="main-content" class="smooth-content">
-            
-            
-
-            
-
-
-    <section class="general-heading-block container grid" data-disable-animation="False">
-        <div class="general-heading-block__wrapper">
-                <h1 class="general-heading-block__title js-animate-text">
-                    Insights
-                </h1>
-
-                <div class="general-heading-block__content js-animate-page-transition-in">
-                    
-<p>Our experts share their insights, gained from shaping the built environment. Explore our ideas for creating a low carbon, resilient, and more equitable future.</p>
-                </div>
-
+    <!-- Footer: full-bleed red block after Issues section -->
+    <footer class="footer-right">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <h3 class="site-name">ABOD</h3>
+          <p class="site-desc">© 2025 ABOD — All rights reserved</p>
+          <p class="footer-blurb">
+            Designing sustainable places and systems. We work across markets to
+            make long-term, people-centred change.
+          </p>
         </div>
 
-    </section>
-
-
-
-
-    <div class="page-navigation js-page-navigation js-animate-page-transition-in container"
-        data-view-more-label="View more"
-        data-view-less-label="View less"
-    >
-        <div class="swiper-container">
-            <ul class="page-navigation__links swiper-wrapper" id="page-navigation__links">
-                    <li class="page-navigation__link-item swiper-slide ">
-                        <a href="/insights/all-insights/" class="pill-unselected">
-                            <svg class="icon icon--rotate" viewBox="0 0 32 32">
-                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-burger-close"></use>
-                            </svg>
-                            <span>All Insights</span>
-                        </a>
-                    </li>
-                    <li class="page-navigation__link-item swiper-slide ">
-                        <a href="/insights/all-inclusive-cities-insights/" class="pill-unselected">
-                            <svg class="icon icon--rotate" viewBox="0 0 32 32">
-                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-burger-close"></use>
-                            </svg>
-                            <span>All inclusive cities insights</span>
-                        </a>
-                    </li>
-                    <li class="page-navigation__link-item swiper-slide ">
-                        <a href="/insights/all-transport-insights/" class="pill-unselected">
-                            <svg class="icon icon--rotate" viewBox="0 0 32 32">
-                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-burger-close"></use>
-                            </svg>
-                            <span>All transport insights</span>
-                        </a>
-                    </li>
-                    <li class="page-navigation__link-item swiper-slide ">
-                        <a href="/insights/all-energy-transition-insights/" class="pill-unselected">
-                            <svg class="icon icon--rotate" viewBox="0 0 32 32">
-                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-burger-close"></use>
-                            </svg>
-                            <span>All energy transition insights</span>
-                        </a>
-                    </li>
-                    <li class="page-navigation__link-item swiper-slide ">
-                        <a href="/insights/all-nature-insights/" class="pill-unselected">
-                            <svg class="icon icon--rotate" viewBox="0 0 32 32">
-                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-burger-close"></use>
-                            </svg>
-                            <span>All nature insights</span>
-                        </a>
-                    </li>
-                    <li class="page-navigation__link-item swiper-slide ">
-                        <a href="/insights/all-decarbonisation-insights/" class="pill-unselected">
-                            <svg class="icon icon--rotate" viewBox="0 0 32 32">
-                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-burger-close"></use>
-                            </svg>
-                            <span>All decarbonisation insights</span>
-                        </a>
-                    </li>
-                    <li class="page-navigation__link-item swiper-slide ">
-                        <a href="/insights/all-resilience-insights/" class="pill-unselected">
-                            <svg class="icon icon--rotate" viewBox="0 0 32 32">
-                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-burger-close"></use>
-                            </svg>
-                            <span>All resilience Insights</span>
-                        </a>
-                    </li>
-                    <li class="page-navigation__link-item swiper-slide ">
-                        <a href="/insights/all-design-insights/" class="pill-unselected">
-                            <svg class="icon icon--rotate" viewBox="0 0 32 32">
-                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-burger-close"></use>
-                            </svg>
-                            <span>All design Insights</span>
-                        </a>
-                    </li>
-                    <li class="page-navigation__link-item swiper-slide ">
-                        <a href="/insights/all-climate-and-sustainability-insights/" class="pill-unselected">
-                            <svg class="icon icon--rotate" viewBox="0 0 32 32">
-                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-burger-close"></use>
-                            </svg>
-                            <span>All climate &amp; sustainability insights</span>
-                        </a>
-                    </li>
-                    <li class="page-navigation__link-item swiper-slide ">
-                        <a href="/insights/all-social-value-insights/" class="pill-unselected">
-                            <svg class="icon icon--rotate" viewBox="0 0 32 32">
-                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-burger-close"></use>
-                            </svg>
-                            <span>All social value insights</span>
-                        </a>
-                    </li>
-                <li class="swiper-slide">
-                    <button class="pill-expand" type="button" aria-controls="page-navigation__links" aria-expanded="false" aria-label="Expand Menu">
-                        <span class="label">View more</span>
-                        <div class="icon-wrapper">
-                            <svg class="icon icon--open icon--rotate" viewBox="0 0 24 24">
-                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-accordion-open"></use>
-                            </svg>
-                            <svg class="icon icon--close" viewBox="0 0 24 24">
-                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-accordion-close"></use>
-                            </svg>
-                        </div>
-                    </button>
-                </li>
+        <div class="footer-right-columns">
+          <nav class="footer-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="{% url 'markets' %}">Markets</a></li>
+              <li><a href="{% url 'services' %}">Services</a></li>
+              <li><a href="{% url 'projects' %}">Projects</a></li>
+              <li><a href="{% url 'insights' %}">Insights</a></li>
             </ul>
-        </div>
-    </div>
-
-
-<div id="main-content-area" class="main-content__component-wrapper">
-    <section class="component insightsheroblock">
-    <div class="insights-hero-block container js-animate-page-transition-in">
-        
-
-<div class="base-heading-block js-base-heading-block grid">
-        <div class="base-heading-block__cta js-animate-page-transition-in">
-            
-
-    <a class="cta-primary js-data-layer-cta" href="/insights/all-insights/" aria-label="View all insights">
-        <span>View all insights</span>
-        
-    <svg class="icon icon--arrow-right" viewBox="0 0 32 32">
-        <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-cta-right"></use>
-    </svg>
-
-    </a>
-
-        </div>
-</div>
-        <div class="insights-cards__wrapper">
-                <div class="grid insights-cards js-animate-stagger">
-                        
-    <a href="/insights/life-after-coal-power-stations-how-the-end-of-an-era-should-not-become-the-end-of-an-area/" class="insights-card card-focus insights-card--page-featured insights-card--page-featured brand-theme__white insights-card js-item-to-stagger">
-        <div class="insights-card__content">
-            <span class="insights-card__label">
-                Article
-            </span>
-
-            <div class="insights-card__text-wrapper">
-                    <h2 class="insights-card__title">Life after coal power stations &#x2013; how the end of an era should not become the end of an area</h2>
-                    <p class="insights-card__description">
-                        Electricity systems are shifting from coal to renewables. How can the transition be commercially viable, socially beneficial, and achievable?
-                    </p>
-            </div>
-        </div>
-
-            <div class="insights-card__image-wrapper">
-                <picture><source srcset="/globalassets/images/insights/perspective-articles/l/life-after-coal-power-stations/drone-view-of-ratcliffe-on-soar-power-station-teaser.jpg?format=webp&width=440&height=440&quality=80 440w, /globalassets/images/insights/perspective-articles/l/life-after-coal-power-stations/drone-view-of-ratcliffe-on-soar-power-station-teaser.jpg?format=webp&width=767&height=767&quality=80 767w, /globalassets/images/insights/perspective-articles/l/life-after-coal-power-stations/drone-view-of-ratcliffe-on-soar-power-station-teaser.jpg?format=webp&width=900&height=900&quality=80 900w, /globalassets/images/insights/perspective-articles/l/life-after-coal-power-stations/drone-view-of-ratcliffe-on-soar-power-station-teaser.jpg?format=webp&width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" type="image/webp"/><source srcset="/globalassets/images/insights/perspective-articles/l/life-after-coal-power-stations/drone-view-of-ratcliffe-on-soar-power-station-teaser.jpg?width=440&height=440&quality=80 440w, /globalassets/images/insights/perspective-articles/l/life-after-coal-power-stations/drone-view-of-ratcliffe-on-soar-power-station-teaser.jpg?width=767&height=767&quality=80 767w, /globalassets/images/insights/perspective-articles/l/life-after-coal-power-stations/drone-view-of-ratcliffe-on-soar-power-station-teaser.jpg?width=900&height=900&quality=80 900w, /globalassets/images/insights/perspective-articles/l/life-after-coal-power-stations/drone-view-of-ratcliffe-on-soar-power-station-teaser.jpg?width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" /><img alt="A large city landscape." src="/globalassets/images/insights/perspective-articles/l/life-after-coal-power-stations/drone-view-of-ratcliffe-on-soar-power-station-teaser.jpg?width=1024&height=1024&quality=80" loading="lazy" decoding="async" /></picture>
-
-            </div>
-    </a>
-
-                        
-    <a href="/insights/the-strategic-advantage-of-assessing-climate-risk-now/" class="insights-card card-focus insights-card--quarter-width insights-card--quarter-width brand-theme__white insights-card js-item-to-stagger">
-        <div class="insights-card__content">
-            <span class="insights-card__label">
-                Article
-            </span>
-
-            <div class="insights-card__text-wrapper">
-                    <p class="insights-card__title">
-                        The strategic advantage of assessing climate risk now
-                    </p>
-            </div>
-        </div>
-
-            <div class="insights-card__image-wrapper">
-                <picture><source srcset="/globalassets/images/insights/perspective-articles/t/the-strategic-advantage-of-assessing-climate-risk-now/city-urban-heat.webp?width=440&height=440&quality=80 440w, /globalassets/images/insights/perspective-articles/t/the-strategic-advantage-of-assessing-climate-risk-now/city-urban-heat.webp?width=767&height=767&quality=80 767w, /globalassets/images/insights/perspective-articles/t/the-strategic-advantage-of-assessing-climate-risk-now/city-urban-heat.webp?width=900&height=900&quality=80 900w, /globalassets/images/insights/perspective-articles/t/the-strategic-advantage-of-assessing-climate-risk-now/city-urban-heat.webp?width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" /><img alt="City in heatwave " src="/globalassets/images/insights/perspective-articles/t/the-strategic-advantage-of-assessing-climate-risk-now/city-urban-heat.webp?width=1024&height=1024&quality=80" loading="lazy" decoding="async" /></picture>
-
-            </div>
-    </a>
-
-                </div>
-
-                <div class="grid insights-cards js-animate-stagger">
-                        
-    <a href="/insights/understand-tomorrow-now-how-our-1-3-10-30-tool-shapes-better-outcomes/" class="insights-card card-focus insights-card--quarter-width insights-card--quarter-width brand-theme__white insights-card js-item-to-stagger">
-        <div class="insights-card__content">
-            <span class="insights-card__label">
-                Article
-            </span>
-
-            <div class="insights-card__text-wrapper">
-                    <p class="insights-card__title">
-                        1&#x2013;3&#x2013;10&#x2013;30: a tool that models tomorrow&#x2019;s reality to inform today&#x2019;s priorities
-                    </p>
-            </div>
-        </div>
-
-            <div class="insights-card__image-wrapper">
-                <picture><source srcset="/globalassets/images/insights/perspective-articles/1/1-3-10-30/data-points-graphic.webp?width=440&height=440&quality=80 440w, /globalassets/images/insights/perspective-articles/1/1-3-10-30/data-points-graphic.webp?width=767&height=767&quality=80 767w, /globalassets/images/insights/perspective-articles/1/1-3-10-30/data-points-graphic.webp?width=900&height=900&quality=80 900w, /globalassets/images/insights/perspective-articles/1/1-3-10-30/data-points-graphic.webp?width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" /><img alt="Scatter chart" src="/globalassets/images/insights/perspective-articles/1/1-3-10-30/data-points-graphic.webp?width=1024&height=1024&quality=80" loading="lazy" decoding="async" /></picture>
-
-            </div>
-    </a>
-
-                        
-    <a href="/insights/sydney-as-a-renewable-energy-zone/" class="insights-card card-focus insights-card--quarter-width insights-card--quarter-width brand-theme__white insights-card js-item-to-stagger">
-        <div class="insights-card__content">
-            <span class="insights-card__label">
-                Publication
-            </span>
-
-            <div class="insights-card__text-wrapper">
-                    <p class="insights-card__title">
-                        Sydney as a Renewable Energy Zone
-                    </p>
-            </div>
-        </div>
-
-            <div class="insights-card__image-wrapper">
-                <picture><source srcset="/globalassets/images/insights/publications/s/sydney-as-a-renewable-energy-zone/sydney-renewable-energy-zone-teaser.jpg?format=webp&width=440&height=440&quality=80 440w, /globalassets/images/insights/publications/s/sydney-as-a-renewable-energy-zone/sydney-renewable-energy-zone-teaser.jpg?format=webp&width=767&height=767&quality=80 767w, /globalassets/images/insights/publications/s/sydney-as-a-renewable-energy-zone/sydney-renewable-energy-zone-teaser.jpg?format=webp&width=900&height=900&quality=80 900w, /globalassets/images/insights/publications/s/sydney-as-a-renewable-energy-zone/sydney-renewable-energy-zone-teaser.jpg?format=webp&width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" type="image/webp"/><source srcset="/globalassets/images/insights/publications/s/sydney-as-a-renewable-energy-zone/sydney-renewable-energy-zone-teaser.jpg?width=440&height=440&quality=80 440w, /globalassets/images/insights/publications/s/sydney-as-a-renewable-energy-zone/sydney-renewable-energy-zone-teaser.jpg?width=767&height=767&quality=80 767w, /globalassets/images/insights/publications/s/sydney-as-a-renewable-energy-zone/sydney-renewable-energy-zone-teaser.jpg?width=900&height=900&quality=80 900w, /globalassets/images/insights/publications/s/sydney-as-a-renewable-energy-zone/sydney-renewable-energy-zone-teaser.jpg?width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" /><img alt="Diagram, engineering drawing." src="/globalassets/images/insights/publications/s/sydney-as-a-renewable-energy-zone/sydney-renewable-energy-zone-teaser.jpg?width=1024&height=1024&quality=80" loading="lazy" decoding="async" /></picture>
-
-            </div>
-    </a>
-
-                        
-    <a href="/insights/sustainable-forces/sustainable-forces-s3-e2-what-makes-a-building-material-sustainable/" class="insights-card card-focus insights-card--quarter-width insights-card--quarter-width brand-theme__white insights-card js-item-to-stagger">
-        <div class="insights-card__content">
-            <span class="insights-card__label">
-                Podcast
-            </span>
-
-            <div class="insights-card__text-wrapper">
-                    <p class="insights-card__title">
-                        What makes a building material sustainable?
-                    </p>
-            </div>
-        </div>
-
-            <div class="insights-card__image-wrapper">
-                <picture><source srcset="/globalassets/images/insights/sustainable-forces/view-of-sky-from-in-building-sustainable-forces-s3e2.webp?width=440&height=440&quality=80 440w, /globalassets/images/insights/sustainable-forces/view-of-sky-from-in-building-sustainable-forces-s3e2.webp?width=767&height=767&quality=80 767w, /globalassets/images/insights/sustainable-forces/view-of-sky-from-in-building-sustainable-forces-s3e2.webp?width=900&height=900&quality=80 900w, /globalassets/images/insights/sustainable-forces/view-of-sky-from-in-building-sustainable-forces-s3e2.webp?width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" /><img alt="A view looking up at the sky." src="/globalassets/images/insights/sustainable-forces/view-of-sky-from-in-building-sustainable-forces-s3e2.webp?width=1024&height=1024&quality=80" loading="lazy" decoding="async" /></picture>
-
-                    <button class="cta-media">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-podcast"></use>
-                        </svg>
-                        <span>Listen</span>
-                    </button>
-            </div>
-    </a>
-
-                        
-    <a href="/insights/food-growing-in-our-towns-and-cities/" class="insights-card card-focus insights-card--quarter-width insights-card--quarter-width brand-theme__white insights-card js-item-to-stagger">
-        <div class="insights-card__content">
-            <span class="insights-card__label">
-                Publication
-            </span>
-
-            <div class="insights-card__text-wrapper">
-                    <p class="insights-card__title">
-                        Food growing in our towns and cities
-                    </p>
-            </div>
-        </div>
-
-            <div class="insights-card__image-wrapper">
-                <picture><source srcset="/globalassets/images/insights/publications/f/food-growing-in-our-towns-and-cities/food-growing-in-towns-and-cities-teaser.jpg?format=webp&width=440&height=440&quality=80 440w, /globalassets/images/insights/publications/f/food-growing-in-our-towns-and-cities/food-growing-in-towns-and-cities-teaser.jpg?format=webp&width=767&height=767&quality=80 767w, /globalassets/images/insights/publications/f/food-growing-in-our-towns-and-cities/food-growing-in-towns-and-cities-teaser.jpg?format=webp&width=900&height=900&quality=80 900w, /globalassets/images/insights/publications/f/food-growing-in-our-towns-and-cities/food-growing-in-towns-and-cities-teaser.jpg?format=webp&width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" type="image/webp"/><source srcset="/globalassets/images/insights/publications/f/food-growing-in-our-towns-and-cities/food-growing-in-towns-and-cities-teaser.jpg?width=440&height=440&quality=80 440w, /globalassets/images/insights/publications/f/food-growing-in-our-towns-and-cities/food-growing-in-towns-and-cities-teaser.jpg?width=767&height=767&quality=80 767w, /globalassets/images/insights/publications/f/food-growing-in-our-towns-and-cities/food-growing-in-towns-and-cities-teaser.jpg?width=900&height=900&quality=80 900w, /globalassets/images/insights/publications/f/food-growing-in-our-towns-and-cities/food-growing-in-towns-and-cities-teaser.jpg?width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" /><img alt="An allotment in a city" src="/globalassets/images/insights/publications/f/food-growing-in-our-towns-and-cities/food-growing-in-towns-and-cities-teaser.jpg?width=1024&height=1024&quality=80" loading="lazy" decoding="async" /></picture>
-
-            </div>
-    </a>
-
-                </div>
-        </div>
-    </div>
-</section>
-
-    <section class="component issuesblock has-theme theme-surface-invert">
-    <div class="container issues-block js-animate-stagger">
-        
-
-<div class="base-heading-block js-base-heading-block grid">
-        <div class="base-heading-block__content">
-                <h2 class="base-heading-block__heading js-animate-page-transition-in">Issues</h2>
-                <h3 class="base-heading-block__strapline js-animate-page-transition-in">Explore the forces driving development of the built environment and how what we plan, design and build interacts with natural systems. </h3>
-        </div>
-        <div class="base-heading-block__cta js-animate-page-transition-in">
-            
-
-    <a class="cta-primary js-data-layer-cta" href="/insights/issues/" aria-label="Explore Issues">
-        <span>Explore Issues</span>
-        
-    <svg class="icon icon--arrow-right" viewBox="0 0 32 32">
-        <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-cta-right"></use>
-    </svg>
-
-    </a>
-
-        </div>
-</div>
-
-            <div class="issues-cards js-issues-cards grid">
-                
-        <a href="/insights/issues/maritime-decarbonisation/" class="issues-card card-focus brand-theme__grey issues-card--regular issues-card--centre js-item-to-stagger issues-card--third">
-            <div class="issues-card__content">
-                    <h4 class="issues-card__subheading">
-                        Issue
-                    </h4>
-                    <p class="issues-card__title">How can the maritime and shipping industries decarbonise?</p>
-            </div>
-                <div class="issues-card__shape">
-                    <div class="issues-card__shape-wrapper">
-                        <div class="issues-card__image-wrapper js-image-to-stagger">
-                            <picture><source srcset="/globalassets/images/insights/issues/maritime-decarbonisation/arial-view-of-port-at-night-teaser2.jpg?format=webp&width=240&quality=80 240w, /globalassets/images/insights/issues/maritime-decarbonisation/arial-view-of-port-at-night-teaser2.jpg?format=webp&width=440&quality=80 440w, /globalassets/images/insights/issues/maritime-decarbonisation/arial-view-of-port-at-night-teaser2.jpg?format=webp&width=1000&quality=80 1000w" sizes="(max-width: 768px) 240px, (max-width: 1024px) 440px, 1000px" type="image/webp"/><source srcset="/globalassets/images/insights/issues/maritime-decarbonisation/arial-view-of-port-at-night-teaser2.jpg?width=240&quality=80 240w, /globalassets/images/insights/issues/maritime-decarbonisation/arial-view-of-port-at-night-teaser2.jpg?width=440&quality=80 440w, /globalassets/images/insights/issues/maritime-decarbonisation/arial-view-of-port-at-night-teaser2.jpg?width=1000&quality=80 1000w" sizes="(max-width: 768px) 240px, (max-width: 1024px) 440px, 1000px" /><img alt="A large warehouse with a bridge in the background." src="/globalassets/images/insights/issues/maritime-decarbonisation/arial-view-of-port-at-night-teaser2.jpg?width=1000&quality=80" loading="lazy" decoding="async" /></picture>
-                        </div>
-                    </div>
-                </div>
-        </a>
-        <a href="/insights/issues/how-do-we-protect-our-cities-from-rising-temperatures/" class="issues-card card-focus brand-theme__orange issues-card--regular issues-card--centre js-item-to-stagger issues-card--third">
-            <div class="issues-card__content">
-                    <h4 class="issues-card__subheading">
-                        Issues
-                    </h4>
-                    <p class="issues-card__title">How do we protect our cities from rising temperatures?</p>
-            </div>
-                <div class="issues-card__shape">
-                    <div class="issues-card__shape-wrapper">
-                        <div class="issues-card__image-wrapper js-image-to-stagger">
-                            <picture><source srcset="/globalassets/images/insights/issues/urban-cooling/header-image-unsplash-1000px.jpg?format=webp&width=240&quality=80 240w, /globalassets/images/insights/issues/urban-cooling/header-image-unsplash-1000px.jpg?format=webp&width=440&quality=80 440w, /globalassets/images/insights/issues/urban-cooling/header-image-unsplash-1000px.jpg?format=webp&width=1000&quality=80 1000w" sizes="(max-width: 768px) 240px, (max-width: 1024px) 440px, 1000px" type="image/webp"/><source srcset="/globalassets/images/insights/issues/urban-cooling/header-image-unsplash-1000px.jpg?width=240&quality=80 240w, /globalassets/images/insights/issues/urban-cooling/header-image-unsplash-1000px.jpg?width=440&quality=80 440w, /globalassets/images/insights/issues/urban-cooling/header-image-unsplash-1000px.jpg?width=1000&quality=80 1000w" sizes="(max-width: 768px) 240px, (max-width: 1024px) 440px, 1000px" /><img alt="A city with many buildings." src="/globalassets/images/insights/issues/urban-cooling/header-image-unsplash-1000px.jpg?width=1000&quality=80" loading="lazy" decoding="async" /></picture>
-                        </div>
-                    </div>
-                </div>
-        </a>
-        <a href="/insights/issues/how-do-we-build-an-electricity-grid-fit-for-the-future/" class="issues-card card-focus brand-theme__bright-blue issues-card-- issues-card-- js-item-to-stagger issues-card--third">
-            <div class="issues-card__content">
-                    <h4 class="issues-card__subheading">
-                        Issue
-                    </h4>
-                    <p class="issues-card__title">How do we build an electricity grid fit for the future?</p>
-            </div>
-                <div class="issues-card__shape">
-                    <div class="issues-card__shape-wrapper">
-                        <div class="issues-card__image-wrapper js-image-to-stagger">
-                            <picture><source srcset="/globalassets/images/insights/issues/energy-grid-fit-for-future/electricity-tranmission-towers2.jpg?format=webp&width=240&quality=80 240w, /globalassets/images/insights/issues/energy-grid-fit-for-future/electricity-tranmission-towers2.jpg?format=webp&width=440&quality=80 440w, /globalassets/images/insights/issues/energy-grid-fit-for-future/electricity-tranmission-towers2.jpg?format=webp&width=1000&quality=80 1000w" sizes="(max-width: 768px) 240px, (max-width: 1024px) 440px, 1000px" type="image/webp"/><source srcset="/globalassets/images/insights/issues/energy-grid-fit-for-future/electricity-tranmission-towers2.jpg?width=240&quality=80 240w, /globalassets/images/insights/issues/energy-grid-fit-for-future/electricity-tranmission-towers2.jpg?width=440&quality=80 440w, /globalassets/images/insights/issues/energy-grid-fit-for-future/electricity-tranmission-towers2.jpg?width=1000&quality=80 1000w" sizes="(max-width: 768px) 240px, (max-width: 1024px) 440px, 1000px" /><img alt="" src="/globalassets/images/insights/issues/energy-grid-fit-for-future/electricity-tranmission-towers2.jpg?width=1000&quality=80" loading="lazy" decoding="async" /></picture>
-                        </div>
-                    </div>
-                </div>
-        </a>
-
-            </div>
-    </div>
-</section>
-
-    <section class="component editorialinsightsblock">
-    <div class="editorial-insights-block container js-animate-page-transition-in js-editorial-insights-block">
-        
-
-<div class="base-heading-block js-base-heading-block grid">
-        <div class="base-heading-block__content">
-                <h2 class="base-heading-block__heading js-animate-page-transition-in">Resilience</h2>
-                <h3 class="base-heading-block__strapline js-animate-page-transition-in">Explore our latest ideas around building resilience</h3>
-        </div>
-        <div class="base-heading-block__cta js-animate-page-transition-in">
-            
-
-    <a class="cta-primary js-data-layer-cta" href="/insights/all-resilience-insights/" aria-label="See more">
-        <span>See more</span>
-        
-    <svg class="icon icon--arrow-right" viewBox="0 0 32 32">
-        <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-cta-right"></use>
-    </svg>
-
-    </a>
-
-        </div>
-</div>
-
-        <div class="insights-cards__wrapper">
-                    
-    <a href="/insights/road-to-resilience/" class="insights-card card-focus insights-card--quarter-width insights-card--quarter-width brand-theme__white insights-card js-item-to-stagger">
-        <div class="insights-card__content">
-            <span class="insights-card__label">
-                Publication
-            </span>
-
-            <div class="insights-card__text-wrapper">
-                    <p class="insights-card__title">
-                        Road to resilience: practical insights to enable more resilient and adaptable road networks
-                    </p>
-            </div>
-        </div>
-
-            <div class="insights-card__image-wrapper">
-                <picture><source srcset="/globalassets/images/insights/publications/r/road-to-resilience/multimodal-road-illustration-teaser.jpg?format=webp&width=440&height=440&quality=80 440w, /globalassets/images/insights/publications/r/road-to-resilience/multimodal-road-illustration-teaser.jpg?format=webp&width=767&height=767&quality=80 767w, /globalassets/images/insights/publications/r/road-to-resilience/multimodal-road-illustration-teaser.jpg?format=webp&width=900&height=900&quality=80 900w, /globalassets/images/insights/publications/r/road-to-resilience/multimodal-road-illustration-teaser.jpg?format=webp&width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" type="image/webp"/><source srcset="/globalassets/images/insights/publications/r/road-to-resilience/multimodal-road-illustration-teaser.jpg?width=440&height=440&quality=80 440w, /globalassets/images/insights/publications/r/road-to-resilience/multimodal-road-illustration-teaser.jpg?width=767&height=767&quality=80 767w, /globalassets/images/insights/publications/r/road-to-resilience/multimodal-road-illustration-teaser.jpg?width=900&height=900&quality=80 900w, /globalassets/images/insights/publications/r/road-to-resilience/multimodal-road-illustration-teaser.jpg?width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" /><img alt="An illustration of multimodal road transport" src="/globalassets/images/insights/publications/r/road-to-resilience/multimodal-road-illustration-teaser.jpg?width=1024&height=1024&quality=80" loading="lazy" decoding="async" /></picture>
-
-            </div>
-    </a>
-
-                    
-    <a href="/insights/city-competitiveness-redefined-which-cities-will-thrive-in-the-era-of-climate-change/" class="insights-card card-focus insights-card--half-width insights-card--half-width brand-theme__white insights-card js-item-to-stagger">
-        <div class="insights-card__content">
-            <span class="insights-card__label">
-                Publication
-            </span>
-
-            <div class="insights-card__text-wrapper">
-                    <p class="insights-card__title">
-                        City Competitiveness Redefined: which cities will thrive in the era of climate change?
-                    </p>
-            </div>
-        </div>
-
-            <div class="insights-card__image-wrapper">
-                <picture><source srcset="/globalassets/images/insights/publications/c/competitive-cities-redefined/vancouver-image.jpg?format=webp&width=440&height=235&quality=80 440w, /globalassets/images/insights/publications/c/competitive-cities-redefined/vancouver-image.jpg?format=webp&width=470&height=251&quality=80 470w, /globalassets/images/insights/publications/c/competitive-cities-redefined/vancouver-image.jpg?format=webp&width=720&height=385&quality=80 720w, /globalassets/images/insights/publications/c/competitive-cities-redefined/vancouver-image.jpg?format=webp&width=910&height=487&quality=80 910w" sizes="(max-width: 480px) 440px, (max-width: 767px) 720px, (max-width: 1023px) 470px, 910px" type="image/webp"/><source srcset="/globalassets/images/insights/publications/c/competitive-cities-redefined/vancouver-image.jpg?width=440&height=235&quality=80 440w, /globalassets/images/insights/publications/c/competitive-cities-redefined/vancouver-image.jpg?width=470&height=251&quality=80 470w, /globalassets/images/insights/publications/c/competitive-cities-redefined/vancouver-image.jpg?width=720&height=385&quality=80 720w, /globalassets/images/insights/publications/c/competitive-cities-redefined/vancouver-image.jpg?width=910&height=487&quality=80 910w" sizes="(max-width: 480px) 440px, (max-width: 767px) 720px, (max-width: 1023px) 470px, 910px" /><img alt="" src="/globalassets/images/insights/publications/c/competitive-cities-redefined/vancouver-image.jpg?width=910&height=487&quality=80" loading="lazy" decoding="async" /></picture>
-
-            </div>
-    </a>
-
-                    
-    <a href="/insights/rail-resilience-framework/" class="insights-card card-focus insights-card--quarter-width insights-card--quarter-width brand-theme__white insights-card js-item-to-stagger">
-        <div class="insights-card__content">
-            <span class="insights-card__label">
-                Publication
-            </span>
-
-            <div class="insights-card__text-wrapper">
-                    <p class="insights-card__title">
-                        Rail Resilience Framework
-                    </p>
-            </div>
-        </div>
-
-            <div class="insights-card__image-wrapper">
-                <picture><source srcset="/globalassets/images/insights/publications/r/rail-resilience-framework/train-at-a-station-rail-resilience-framework-hero.jpg?format=webp&width=440&height=440&quality=80 440w, /globalassets/images/insights/publications/r/rail-resilience-framework/train-at-a-station-rail-resilience-framework-hero.jpg?format=webp&width=767&height=767&quality=80 767w, /globalassets/images/insights/publications/r/rail-resilience-framework/train-at-a-station-rail-resilience-framework-hero.jpg?format=webp&width=900&height=900&quality=80 900w, /globalassets/images/insights/publications/r/rail-resilience-framework/train-at-a-station-rail-resilience-framework-hero.jpg?format=webp&width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" type="image/webp"/><source srcset="/globalassets/images/insights/publications/r/rail-resilience-framework/train-at-a-station-rail-resilience-framework-hero.jpg?width=440&height=440&quality=80 440w, /globalassets/images/insights/publications/r/rail-resilience-framework/train-at-a-station-rail-resilience-framework-hero.jpg?width=767&height=767&quality=80 767w, /globalassets/images/insights/publications/r/rail-resilience-framework/train-at-a-station-rail-resilience-framework-hero.jpg?width=900&height=900&quality=80 900w, /globalassets/images/insights/publications/r/rail-resilience-framework/train-at-a-station-rail-resilience-framework-hero.jpg?width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" /><img alt="Train at a station with passengers on the platform" src="/globalassets/images/insights/publications/r/rail-resilience-framework/train-at-a-station-rail-resilience-framework-hero.jpg?width=1024&height=1024&quality=80" loading="lazy" decoding="async" /></picture>
-
-            </div>
-    </a>
-
-                    
-    <a href="/insights/measuring-resilience-a-guide-to-tracking-progress/" class="insights-card card-focus insights-card--quarter-width insights-card--quarter-width brand-theme__white insights-card js-item-to-stagger">
-        <div class="insights-card__content">
-            <span class="insights-card__label">
-                Publication
-            </span>
-
-            <div class="insights-card__text-wrapper">
-                    <p class="insights-card__title">
-                        Measuring Resilience: A Guide to Tracking Progress
-                    </p>
-            </div>
-        </div>
-
-            <div class="insights-card__image-wrapper">
-                <picture><source srcset="/globalassets/images/insights/publications/measuring-resilience-a-guide-to-tracking-progress-banner.jpg?format=webp&width=440&height=440&quality=80 440w, /globalassets/images/insights/publications/measuring-resilience-a-guide-to-tracking-progress-banner.jpg?format=webp&width=767&height=767&quality=80 767w, /globalassets/images/insights/publications/measuring-resilience-a-guide-to-tracking-progress-banner.jpg?format=webp&width=900&height=900&quality=80 900w, /globalassets/images/insights/publications/measuring-resilience-a-guide-to-tracking-progress-banner.jpg?format=webp&width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" type="image/webp"/><source srcset="/globalassets/images/insights/publications/measuring-resilience-a-guide-to-tracking-progress-banner.jpg?width=440&height=440&quality=80 440w, /globalassets/images/insights/publications/measuring-resilience-a-guide-to-tracking-progress-banner.jpg?width=767&height=767&quality=80 767w, /globalassets/images/insights/publications/measuring-resilience-a-guide-to-tracking-progress-banner.jpg?width=900&height=900&quality=80 900w, /globalassets/images/insights/publications/measuring-resilience-a-guide-to-tracking-progress-banner.jpg?width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" /><img alt="Measuring resilience: a guide to tracking progress" src="/globalassets/images/insights/publications/measuring-resilience-a-guide-to-tracking-progress-banner.jpg?width=1024&height=1024&quality=80" loading="lazy" decoding="async" /></picture>
-
-            </div>
-    </a>
-
-                    
-    <a href="/insights/what-is-climate-resilience/" class="insights-card card-focus insights-card--quarter-width insights-card--quarter-width brand-theme__white insights-card js-item-to-stagger">
-        <div class="insights-card__content">
-            <span class="insights-card__label">
-                Arup Explains
-            </span>
-
-            <div class="insights-card__text-wrapper">
-                    <p class="insights-card__title">
-                        What is climate resilience?
-                    </p>
-            </div>
-        </div>
-
-            <div class="insights-card__image-wrapper">
-                <picture><source srcset="/globalassets/images/insights/arup-explains2/what-is-climate-resilience/what-is-climate-resilience-teaser.jpg?format=webp&width=440&height=440&rxy=0.45%2c0.6&quality=80 440w, /globalassets/images/insights/arup-explains2/what-is-climate-resilience/what-is-climate-resilience-teaser.jpg?format=webp&width=767&height=767&rxy=0.45%2c0.6&quality=80 767w, /globalassets/images/insights/arup-explains2/what-is-climate-resilience/what-is-climate-resilience-teaser.jpg?format=webp&width=900&height=900&rxy=0.45%2c0.6&quality=80 900w, /globalassets/images/insights/arup-explains2/what-is-climate-resilience/what-is-climate-resilience-teaser.jpg?format=webp&width=1024&height=1024&rxy=0.45%2c0.6&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" type="image/webp"/><source srcset="/globalassets/images/insights/arup-explains2/what-is-climate-resilience/what-is-climate-resilience-teaser.jpg?width=440&height=440&rxy=0.45%2c0.6&quality=80 440w, /globalassets/images/insights/arup-explains2/what-is-climate-resilience/what-is-climate-resilience-teaser.jpg?width=767&height=767&rxy=0.45%2c0.6&quality=80 767w, /globalassets/images/insights/arup-explains2/what-is-climate-resilience/what-is-climate-resilience-teaser.jpg?width=900&height=900&rxy=0.45%2c0.6&quality=80 900w, /globalassets/images/insights/arup-explains2/what-is-climate-resilience/what-is-climate-resilience-teaser.jpg?width=1024&height=1024&rxy=0.45%2c0.6&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" /><img alt="What is climate resilience?" src="/globalassets/images/insights/arup-explains2/what-is-climate-resilience/what-is-climate-resilience-teaser.jpg?width=1024&height=1024&rxy=0.45%2c0.6&quality=80" loading="lazy" decoding="async" /></picture>
-
-            </div>
-    </a>
-
-                    
-    <a href="/insights/sustainable-forces/sustainable-forces-s2-e1-can-design-repair-the-planet/" class="insights-card card-focus insights-card--quarter-width insights-card--quarter-width brand-theme__white insights-card js-item-to-stagger">
-        <div class="insights-card__content">
-            <span class="insights-card__label">
-                Podcast
-            </span>
-
-            <div class="insights-card__text-wrapper">
-                    <p class="insights-card__title">
-                        Can design repair the planet?
-                    </p>
-            </div>
-        </div>
-
-            <div class="insights-card__image-wrapper">
-                <picture><source srcset="/globalassets/images/insights/sustainable-forces/panda-in-a-tree-s2-e1-sustainable-forces.jpg?format=webp&width=440&height=440&rxy=0.61%2c0.39&quality=80 440w, /globalassets/images/insights/sustainable-forces/panda-in-a-tree-s2-e1-sustainable-forces.jpg?format=webp&width=767&height=767&rxy=0.61%2c0.39&quality=80 767w, /globalassets/images/insights/sustainable-forces/panda-in-a-tree-s2-e1-sustainable-forces.jpg?format=webp&width=900&height=900&rxy=0.61%2c0.39&quality=80 900w, /globalassets/images/insights/sustainable-forces/panda-in-a-tree-s2-e1-sustainable-forces.jpg?format=webp&width=1024&height=1024&rxy=0.61%2c0.39&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" type="image/webp"/><source srcset="/globalassets/images/insights/sustainable-forces/panda-in-a-tree-s2-e1-sustainable-forces.jpg?width=440&height=440&rxy=0.61%2c0.39&quality=80 440w, /globalassets/images/insights/sustainable-forces/panda-in-a-tree-s2-e1-sustainable-forces.jpg?width=767&height=767&rxy=0.61%2c0.39&quality=80 767w, /globalassets/images/insights/sustainable-forces/panda-in-a-tree-s2-e1-sustainable-forces.jpg?width=900&height=900&rxy=0.61%2c0.39&quality=80 900w, /globalassets/images/insights/sustainable-forces/panda-in-a-tree-s2-e1-sustainable-forces.jpg?width=1024&height=1024&rxy=0.61%2c0.39&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" /><img alt="Panda playing in a tree" src="/globalassets/images/insights/sustainable-forces/panda-in-a-tree-s2-e1-sustainable-forces.jpg?width=1024&height=1024&rxy=0.61%2c0.39&quality=80" loading="lazy" decoding="async" /></picture>
-
-                    <button class="cta-media">
-                        <svg class="icon" viewBox="0 0 24 24">
-                            <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-podcast"></use>
-                        </svg>
-                        <span>Listen</span>
-                    </button>
-            </div>
-    </a>
-
-                    
-    <a href="/insights/transport-resilience-in-a-changing-climate-the-case-for-investment/" class="insights-card card-focus insights-card--quarter-width insights-card--quarter-width brand-theme__white insights-card js-item-to-stagger">
-        <div class="insights-card__content">
-            <span class="insights-card__label">
-                Publication
-            </span>
-
-            <div class="insights-card__text-wrapper">
-                    <p class="insights-card__title">
-                        Transport resilience in a changing climate &#x2013; the case for investment
-                    </p>
-            </div>
-        </div>
-
-            <div class="insights-card__image-wrapper">
-                <picture><source srcset="/globalassets/images/insights/publications/t/transport-resilience-in-a-changing-climaye-the-case-for-investment/pedestrians-crossing-road-in-london-teaser.jpg?format=webp&width=440&height=440&quality=80 440w, /globalassets/images/insights/publications/t/transport-resilience-in-a-changing-climaye-the-case-for-investment/pedestrians-crossing-road-in-london-teaser.jpg?format=webp&width=767&height=767&quality=80 767w, /globalassets/images/insights/publications/t/transport-resilience-in-a-changing-climaye-the-case-for-investment/pedestrians-crossing-road-in-london-teaser.jpg?format=webp&width=900&height=900&quality=80 900w, /globalassets/images/insights/publications/t/transport-resilience-in-a-changing-climaye-the-case-for-investment/pedestrians-crossing-road-in-london-teaser.jpg?format=webp&width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" type="image/webp"/><source srcset="/globalassets/images/insights/publications/t/transport-resilience-in-a-changing-climaye-the-case-for-investment/pedestrians-crossing-road-in-london-teaser.jpg?width=440&height=440&quality=80 440w, /globalassets/images/insights/publications/t/transport-resilience-in-a-changing-climaye-the-case-for-investment/pedestrians-crossing-road-in-london-teaser.jpg?width=767&height=767&quality=80 767w, /globalassets/images/insights/publications/t/transport-resilience-in-a-changing-climaye-the-case-for-investment/pedestrians-crossing-road-in-london-teaser.jpg?width=900&height=900&quality=80 900w, /globalassets/images/insights/publications/t/transport-resilience-in-a-changing-climaye-the-case-for-investment/pedestrians-crossing-road-in-london-teaser.jpg?width=1024&height=1024&quality=80 1024w" sizes="(max-width: 480px) 480px, (max-width: 767px) 767px, (max-width: 1023px) 900px, 1024px" /><img alt="A group of people walking on a street next to a double decker bus." src="/globalassets/images/insights/publications/t/transport-resilience-in-a-changing-climaye-the-case-for-investment/pedestrians-crossing-road-in-london-teaser.jpg?width=1024&height=1024&quality=80" loading="lazy" decoding="async" /></picture>
-
-            </div>
-    </a>
-
-        </div>
-    </div>
-</section>
-
-    <section class="component podcastsblock">
-    <div class="podcasts-block container">
-        
-
-<div class="base-heading-block js-base-heading-block grid">
-        <div class="base-heading-block__content">
-                <h2 class="base-heading-block__heading js-animate-page-transition-in">Podcasts</h2>
-                <h3 class="base-heading-block__strapline js-animate-page-transition-in">Hear directly from sustainability experts at Arup &#x2013; and beyond:</h3>
-        </div>
-        <div class="base-heading-block__cta js-animate-page-transition-in">
-            
-
-    <a class="cta-primary js-data-layer-cta" href="/insights/sustainable-forces/" aria-label="See more">
-        <span>See more</span>
-        
-    <svg class="icon icon--arrow-right" viewBox="0 0 32 32">
-        <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-cta-right"></use>
-    </svg>
-
-    </a>
-
-        </div>
-</div>
-
-        <div class="podcasts-block__inner grid">
-<a class="podcasts-block__listing-wrapper card-focus js-animate-page-transition-in" href="/insights/sustainable-forces/">
-                        <div class="podcasts-block__listing-image-container"><picture><source srcset="/globalassets/images/insights/sustainable-forces/chicago.jpg?format=webp&width=700&height=394&quality=80 700w, /globalassets/images/insights/sustainable-forces/chicago.jpg?format=webp&width=944&height=531&quality=80 944w, /globalassets/images/insights/sustainable-forces/chicago.jpg?format=webp&width=1200&height=675&quality=80 1200w, /globalassets/images/insights/sustainable-forces/chicago.jpg?format=webp&width=1520&height=855&quality=80 1520w, /globalassets/images/insights/sustainable-forces/chicago.jpg?format=webp&width=1840&height=1035&quality=80 1840w" sizes="(max-width: 480px) 100vw, (max-width: 768px) 700px, (max-width: 1024px) 944px, (max-width: 1280px) 1200px, (max-width: 1600px) 1520px, 1840px" type="image/webp"/><source srcset="/globalassets/images/insights/sustainable-forces/chicago.jpg?width=700&height=394&quality=80 700w, /globalassets/images/insights/sustainable-forces/chicago.jpg?width=944&height=531&quality=80 944w, /globalassets/images/insights/sustainable-forces/chicago.jpg?width=1200&height=675&quality=80 1200w, /globalassets/images/insights/sustainable-forces/chicago.jpg?width=1520&height=855&quality=80 1520w, /globalassets/images/insights/sustainable-forces/chicago.jpg?width=1840&height=1035&quality=80 1840w" sizes="(max-width: 480px) 100vw, (max-width: 768px) 700px, (max-width: 1024px) 944px, (max-width: 1280px) 1200px, (max-width: 1600px) 1520px, 1840px" /><img alt="Aerial shot of Chicago" src="/globalassets/images/insights/sustainable-forces/chicago.jpg?width=1840&height=1035&quality=80" loading="lazy" decoding="async" /></picture></div>
-                    <div class="podcasts-block__listing-content-wrapper">
-                        <div class="podcasts-block__listing-content-wrapper-inner">
-                                <div class="podcasts-block__listing-tag">Podcast series</div>
-
-                                <div class="podcasts-block__listing-teaser-title">Sustainable Forces</div>
-                                <div class="podcasts-block__listing-teaser-text">Sustainable Forces is our global podcast about people joining forces for the planet. Join Dr Michelle Dickinson as she uncovers stories of people who work together to create a sustainable future.</div>
-
-                        </div>
-                    </div>
-                </a>
-
-            <div class="podcasts-block__podcasts-wrapper">
-<a class="podcasts-block__podcast card-focus js-animate-page-transition-in" href="/insights/sustainable-forces/sustainable-forces-s3-e7-can-cities-thrive-on-the-water-we-waste/">
-                                    <div class="podcasts-block__podcast-image-container">
-
-                                        <picture><source srcset="/globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e7-city-water-usage.jpg?format=webp&width=280&height=350&quality=80 280w, /globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e7-city-water-usage.jpg?format=webp&width=470&height=588&quality=80 470w, /globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e7-city-water-usage.jpg?format=webp&width=300&height=375&quality=80 300w, /globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e7-city-water-usage.jpg?format=webp&width=600&height=750&quality=80 600w" sizes="(max-width: 480px) 280px, (max-width: 767px) 470px, (max-width: 1023px) 300px, 600px" type="image/webp"/><source srcset="/globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e7-city-water-usage.jpg?width=280&height=350&quality=80 280w, /globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e7-city-water-usage.jpg?width=470&height=588&quality=80 470w, /globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e7-city-water-usage.jpg?width=300&height=375&quality=80 300w, /globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e7-city-water-usage.jpg?width=600&height=750&quality=80 600w" sizes="(max-width: 480px) 280px, (max-width: 767px) 470px, (max-width: 1023px) 300px, 600px" /><img alt="Child playing in water fountain - cities will need to rethink how they approach the sourcing of water" src="/globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e7-city-water-usage.jpg?width=600&height=750&quality=80" loading="lazy" decoding="async" /></picture>
-                                    </div>
-                                <div class="podcasts-block__podcast-content-container">
-
-                                        <div class="podcasts-block__podcast-tag">Podcast</div>
-
-                                        <div class="podcasts-block__podcast-teaser-title">Sustainable Forces S3 E7: Can cities thrive on the water we waste?</div>
-
-                                    <div class="podcasts-block__podcast-info-wrapper">
-                                        <div class="podcasts-block__podcast-icon-container">
-                                            <svg class="icon" viewBox="0 0 24 24">
-                                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-podcast"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="podcasts-block__podcast-episode-info-wrapper">
-                                                <div class="podcasts-block__podcast-episode-text">Sustainable Forces S3 E7</div>
-                                                <div class="podcasts-block__podcast-episode-length">46min</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-<a class="podcasts-block__podcast card-focus js-animate-page-transition-in" href="/insights/sustainable-forces/sustainable-forces-s3-e6-is-your-commute-climate-proof/">
-                                    <div class="podcasts-block__podcast-image-container">
-
-                                        <picture><source srcset="/globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e6-kiwi-rail-transport-resilience.webp?width=280&height=350&quality=80 280w, /globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e6-kiwi-rail-transport-resilience.webp?width=470&height=588&quality=80 470w, /globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e6-kiwi-rail-transport-resilience.webp?width=300&height=375&quality=80 300w, /globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e6-kiwi-rail-transport-resilience.webp?width=600&height=750&quality=80 600w" sizes="(max-width: 480px) 280px, (max-width: 767px) 470px, (max-width: 1023px) 300px, 600px" /><img alt="Kiwi rail train travelling across New Zealand" src="/globalassets/images/insights/sustainable-forces/sustainable-forces-s3-e6-kiwi-rail-transport-resilience.webp?width=600&height=750&quality=80" loading="lazy" decoding="async" /></picture>
-                                    </div>
-                                <div class="podcasts-block__podcast-content-container">
-
-                                        <div class="podcasts-block__podcast-tag">Podcast</div>
-
-                                        <div class="podcasts-block__podcast-teaser-title">Sustainable Forces S3 E6: Is your commute climate proof?</div>
-
-                                    <div class="podcasts-block__podcast-info-wrapper">
-                                        <div class="podcasts-block__podcast-icon-container">
-                                            <svg class="icon" viewBox="0 0 24 24">
-                                                <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-podcast"></use>
-                                            </svg>
-                                        </div>
-                                        <div class="podcasts-block__podcast-episode-info-wrapper">
-                                                <div class="podcasts-block__podcast-episode-text">Sustainable Forces S3 E6</div>
-                                                <div class="podcasts-block__podcast-episode-length">24min</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <section class="component contenttypehighlightblock has-theme theme-surface-secondary">
-    <div class="container content-type-highlight js-animate-stagger">
-        
-
-<div class="base-heading-block js-base-heading-block grid">
-        <div class="base-heading-block__content">
-                <h2 class="base-heading-block__heading js-animate-page-transition-in">Arup Explains</h2>
-                <h3 class="base-heading-block__strapline js-animate-page-transition-in">Understanding key concepts shaping policy and practice</h3>
-        </div>
-        <div class="base-heading-block__cta js-animate-page-transition-in">
-            
-
-    <a class="cta-primary js-data-layer-cta" href="/insights/all-arup-explains/" aria-label="See more">
-        <span>See more</span>
-        
-    <svg class="icon icon--arrow-right" viewBox="0 0 32 32">
-        <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-cta-right"></use>
-    </svg>
-
-    </a>
-
-        </div>
-</div>
-
-            <div class="content-type-highlight grid--tablet" role="list">
-                    <a href="/insights/arup-explains-what-is-integrated-water-management/" class="content-type-highlight__tile card-focus js-item-to-stagger"
-                        role="listitem">
-
-                        <div>
-                                <div class="content-type-highlight__tag">Arup Explains</div>
-
-                                <div class="content-type-highlight__title">What is integrated water management?</div>
-                        </div>
-                    </a>
-                    <a href="/insights/what-are-scope-1-scope-2-and-scope-3-emissions/" class="content-type-highlight__tile card-focus js-item-to-stagger"
-                        role="listitem">
-
-                        <div>
-                                <div class="content-type-highlight__tag">Arup Explains</div>
-
-                                <div class="content-type-highlight__title">What are Scope 1, Scope 2, and Scope 3 emissions?</div>
-                        </div>
-                    </a>
-                    <a href="/insights/what-is-the-energy-transition/" class="content-type-highlight__tile card-focus js-item-to-stagger"
-                        role="listitem">
-
-                        <div>
-                                <div class="content-type-highlight__tag">Arup Explains</div>
-
-                                <div class="content-type-highlight__title">What is the energy transition?</div>
-                        </div>
-                    </a>
-                    <a href="/insights/what-is-regenerative-design/" class="content-type-highlight__tile card-focus js-item-to-stagger"
-                        role="listitem">
-
-                        <div>
-                                <div class="content-type-highlight__tag">Arup Explains</div>
-
-                                <div class="content-type-highlight__title">What is regenerative design?</div>
-                        </div>
-                    </a>
-            </div>
-    </div>
-</section>
-</div>
-
-            
-
-
-
-    <footer class="js-animate-page-transition-in footer-block theme-surface-brand js-intro-reveal">
-        <div class="footer-block__primary-content container grid">
-            <p class="footer-block__brand-statement">
-We guide, plan and design the future of the built environment. We are a global consultancy with advisory and technical expertise across more than 150 disciplines.            </p>
-            <ul class="footer-block__primary-navigation">
-                            <li>
-                                <a class="menu__main--link underline" href="/markets.html" onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Markets', 'nav_type': 'footer'});">Markets</a>
-                            </li>
-                            <li>
-                                <a class="menu__main--link underline" href="/about.html" onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'About', 'nav_type': 'footer'});">About</a>
-                            </li>
-                            <li>
-                                <a class="menu__main--link underline" href="/services.html" onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Services', 'nav_type': 'footer'});">Services</a>
-                            </li>
-                            <li>
-                                <a class="menu__main--link underline" href="/careers.html" onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Careers', 'nav_type': 'footer'});">Careers</a>
-                            </li>
-                            <li>
-                                <a class="menu__main--link underline" href="/projects.html" onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Projects', 'nav_type': 'footer'});">Projects</a>
-                            </li>
-                            <li>
-                                <a class="menu__main--link underline" href="/news.html" onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'News', 'nav_type': 'footer'});">News</a>
-                            </li>
-                            <li>
-                                <a class="menu__main--link underline" href="/insights.html" onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Insights', 'nav_type': 'footer'});">Insights</a>
-                            </li>
-                            <li>
-                                <a class="menu__main--link underline" href="/contact.html" onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Contact', 'nav_type': 'footer'});">Contact</a>
-                            </li>
-                </ul>
-        </div>
-
-        <div class="footer-block__secondary-content container">
-            <div class="footer-block__secondary-content-grouping">
-            <ul class="footer-block__secondary-navigation">
-                    <li>
-                        <a class="menu__main--link underline" href="/about-us/corporate-reports/modern-slavery-and-human-trafficking-statement/"
-                            onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Modern Slavery Statement', 'nav_type': 'footer'});">Modern Slavery Statement</a>
-                    </li>
-                    <li>
-                        <a class="menu__main--link underline" href="/about-us/our-commitments/"
-                            onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Commitments', 'nav_type': 'footer'});">Commitments</a>
-                    </li>
-                    <li>
-                        <a class="menu__main--link underline" href="/about-us/corporate-reports/legal/"
-                            onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Legal', 'nav_type': 'footer'});">Legal</a>
-                    </li>
-                    <li>
-                        <a class="menu__main--link underline" href="/about-us/corporate-reports/policies/"
-                            onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Policies', 'nav_type': 'footer'});">Policies</a>
-                    </li>
-                    <li>
-                        <a class="menu__main--link underline" href="/about-us/corporate-reports/privacy-at-arup/"
-                            onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Privacy', 'nav_type': 'footer'});">Privacy</a>
-                    </li>
-                    <li>
-                        <a class="menu__main--link underline" href="/about-us/our-suppliers/"
-                            onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Suppliers', 'nav_type': 'footer'});">Suppliers</a>
-                    </li>
-                    <li>
-                        <a class="menu__main--link underline" href="/cookies/"
-                            onclick="dataLayer.push({'event': 'nav_click', 'click_text': 'Cookies', 'nav_type': 'footer'});">Cookies</a>
-                    </li>
+          </nav>
+
+          <nav class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="{% url 'about' %}">About</a></li>
+              <li><a href="{% url 'careers' %}">Careers</a></li>
+              <li><a href="{% url 'news' %}">News</a></li>
+              <li><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
-                <div class="footer-block__legal-section">
-                    <span class="footer-block__separator">
-&#xA9;Arup 2025                    </span>
-                        <a aria-label="Homepage" class="footer-block__logo"
-                            href="/"><picture><source srcset="/globalassets/images/site-assets/footer.svg?width=150&height=150&quality=80 150w, /globalassets/images/site-assets/footer.svg?width=180&height=180&quality=80 180w, /globalassets/images/site-assets/footer.svg?width=220&height=220&quality=80 220w" sizes="(max-width: 400px) 150px, (max-width: 768px) 180px, (max-width: 1024px) 220px, (max-width: 1600px) 250px, 150px" /><img alt="Arup logo footer" src="/globalassets/images/site-assets/footer.svg?width=220&height=220&quality=80" loading="lazy" decoding="async" /></picture>
-                        </a>
-                </div>
-
-            </div>
-
-            <div class="footer-block__socials">
-                        <a class="footer-block__socials-icon" href="https://www.facebook.com/ArupGroup/"><picture><source srcset="/globalassets/images/site-assets/facebook.png?format=webp&width=105&quality=80 105w, /globalassets/images/site-assets/facebook.png?format=webp&width=120&quality=80 120w, /globalassets/images/site-assets/facebook.png?format=webp&width=150&quality=80 150w" sizes="(max-width: 0) 105px, (max-width: 1024px) 120px, 150px" type="image/webp"/><source srcset="/globalassets/images/site-assets/facebook.png?width=105&quality=80 105w, /globalassets/images/site-assets/facebook.png?width=120&quality=80 120w, /globalassets/images/site-assets/facebook.png?width=150&quality=80 150w" sizes="(max-width: 0) 105px, (max-width: 1024px) 120px, 150px" /><img alt="Follow us on Facebook" src="/globalassets/images/site-assets/facebook.png?width=150&quality=80" loading="lazy" decoding="async" /></picture>
-                        </a>
-                        <a class="footer-block__socials-icon" href="https://www.instagram.com/arupgroup/"><picture><source srcset="/globalassets/images/site-assets/instagram.svg?width=105&quality=80 105w, /globalassets/images/site-assets/instagram.svg?width=120&quality=80 120w, /globalassets/images/site-assets/instagram.svg?width=150&quality=80 150w" sizes="(max-width: 0) 105px, (max-width: 1024px) 120px, 150px" /><img alt="Follow us on Instagram" src="/globalassets/images/site-assets/instagram.svg?width=150&quality=80" loading="lazy" decoding="async" /></picture>
-                        </a>
-                        <a class="footer-block__socials-icon" href="https://www.linkedin.com/company/arup/"><picture><source srcset="/globalassets/images/site-assets/linkedin.svg?width=105&quality=80 105w, /globalassets/images/site-assets/linkedin.svg?width=120&quality=80 120w, /globalassets/images/site-assets/linkedin.svg?width=150&quality=80 150w" sizes="(max-width: 0) 105px, (max-width: 1024px) 120px, 150px" /><img alt="Follow us on LinkedIn" src="/globalassets/images/site-assets/linkedin.svg?width=150&quality=80" loading="lazy" decoding="async" /></picture>
-                        </a>
-                        <a class="footer-block__socials-icon" href="https://www.youtube.com/@arupgroup"><picture><source srcset="/globalassets/images/site-assets/youtube.svg?width=105&quality=80 105w, /globalassets/images/site-assets/youtube.svg?width=120&quality=80 120w, /globalassets/images/site-assets/youtube.svg?width=150&quality=80 150w" sizes="(max-width: 0) 105px, (max-width: 1024px) 120px, 150px" /><img alt="Follow us on Youtube" src="/globalassets/images/site-assets/youtube.svg?width=150&quality=80" loading="lazy" decoding="async" /></picture>
-                        </a>
-            </div>
+          </nav>
         </div>
+      </div>
+
+      <!-- Divider + social icons row -->
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <div class="footer-divider" aria-hidden="true"></div>
+
+          <div class="footer-socials" aria-label="Social links">
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <!-- LinkedIn SVG -->
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4.98 3.5C4.98 4.60457 4.09 5.5 2.98 5.5C1.87 5.5 1 4.60457 1 3.5C1 2.39543 1.87 1.5 2.98 1.5C4.09 1.5 4.98 2.39543 4.98 3.5Z"
+                  fill="currentColor"
+                />
+                <path d="M1.5 8.5H4.5V22H1.5V8.5Z" fill="currentColor" />
+                <path
+                  d="M8.5 8.5H11.3V10.2H11.3C11.8 9.25 13.1 8.22 15.4 8.22C19.9 8.22 20.5 10.9 20.5 14.6V22H17.5V15.7C17.5 13.7 17.4 11.2 14.2 11.2C11 11.2 10.6 13.5 10.6 15.6V22H7.6V8.5H8.5Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <!-- Twitter SVG -->
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M22 5.92C21.09 6.25 20.13 6.47 19.13 6.56C20.15 6 20.92 5.07 21.28 3.94C20.31 4.46 19.25 4.84 18.12 5.03C17.2 4.06 15.92 3.44 14.5 3.44C11.9 3.44 9.8 5.54 9.8 8.14C9.8 8.47 9.83 8.78 9.9 9.08C6.49 8.92 3.48 7.19 1.67 4.71C1.25 5.4 1 6.19 1 7.04C1 8.62 1.84 9.99 3.11 10.78C2.28 10.76 1.5 10.54 0.8 10.17C0.8 10.19 0.8 10.22 0.8 10.24C0.8 12.46 2.32 14.35 4.36 14.86C3.58 15.08 2.76 15.16 1.91 15.06C2.63 16.9 4.28 18.25 6.22 18.29C4.6 19.55 2.57 20.32 0.35 20.32C-0.05 20.32 -0.44 20.3 -0.82 20.25C1.11 21.57 3.35 22.33 5.78 22.33C14.49 22.33 18.53 14.18 18.53 8.69C18.53 8.51 18.53 8.33 18.52 8.16C19.5 7.52 20.33 6.72 21 5.8L22 5.92Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <!-- Instagram SVG -->
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M7 2C4.24 2 2 4.24 2 7V17C2 19.76 4.24 22 7 22H17C19.76 22 22 19.76 22 17V7C22 4.24 19.76 2 17 2H7ZM12 7.5C14.49 7.5 16.5 9.51 16.5 12C16.5 14.49 14.49 16.5 12 16.5C9.51 16.5 7.5 14.49 7.5 12C7.5 9.51 9.51 7.5 12 7.5ZM18.5 6.1C18.5 6.66 18.06 7.1 17.5 7.1C16.94 7.1 16.5 6.66 16.5 6.1C16.5 5.54 16.94 5.1 17.5 5.1C18.06 5.1 18.5 5.54 18.5 6.1Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
-
-
-        </div>
-    </main>
-
-    <div role="dialog" class="modal-generic" id="js-animate-generic-modal"
-        aria-label="Modal">
-        <div class="modal-generic__wrapper container grid">
-            <div class="modal-generic__inner">
-                <button class="modal-generic__close cta-secondary"
-                    aria-label="Close modal">
-                    <svg class="icon icon--rotate" viewBox="0 0 32 32">
-                        <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-burger-close"></use>
-                    </svg>
-                    <span>Close</span>
-                </button>
-                <div class="modal-generic__content">
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-    <div class="gallery-modal" role="dialog">
-  <button class="gallery-modal__close cta-secondary" aria-label="Close modal">
-    <svg class="icon icon--rotate" viewBox="0 0 32 32">
-      <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-burger-close"></use>
-    </svg>
-    <span>Close</span>
-  </button>
-  <div class="gallery-modal__controls">
-    <button class="gallery-modal__controls-cta cta-focus custom-zoom-in"
-      aria-label="Zoom in">
-      <svg class="icon" viewBox="0 0 24 24">
-        <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-accordion-open"></use>
-      </svg>
-    </button>
-    <button class="gallery-modal__controls-cta cta-focus custom-zoom-out"
-      aria-label="Zoom out">
-      <svg class="icon" viewBox="0 0 24 24">
-        <use xlink:href="/dist/generated-icons/svg-icons-sprite.svg#icon-accordion-close"></use>
-      </svg>
-    </button>
-  </div>
-  <div class="zoomist-container gallery-modal__content" aria-live="polite" aria-atomic="true">
-    <div class="zoomist-wrapper">
-      <div class="zoomist-image"><img src="" alt=""></div>
-    </div>
-  </div>
-  <button class="gallery-modal__close--mobile cta-primary"
-    aria-label="Zoom in">Close</button>
-</div>
-    
-
-    <input id="nearest-office-title" type="hidden" value="Lagos" />
-
-
-    <div id="react-modal"></div>
-
-    <script src="/main.js"></script>
-    </body>
-
-    </html>
+  </body>
+</html>

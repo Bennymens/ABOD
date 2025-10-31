@@ -126,6 +126,15 @@ body {
   background: #fdfdfd;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 15px;
+  /* Make body a column flexbox so footer can be pushed to bottom */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* main content should grow to fill available space */
+.site-main {
+  flex: 1 0 auto;
 }
 
 nav.navbar {
@@ -180,6 +189,30 @@ nav.navbar {
   padding: 8px 14px;
   border-radius: 4px;
   transition: background 0.2s;
+  position: relative;
+  display: inline-block; /* ensure positioning for pseudo-element */
+}
+
+/* Animated underline on hover (left-to-right) */
+.navbar-center a::after,
+.navbar-right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  height: 2px;
+  width: 100%;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+.navbar-center a:hover::after,
+.navbar-right a:hover::after,
+.navbar-center a:focus::after,
+.navbar-right a:focus::after {
+  transform: scaleX(1);
 }
 
 h1,
@@ -195,7 +228,15 @@ h6 {
 
 .navbar-center a:hover,
 .navbar-right a:hover {
-  background: #e2e6ea;
+  /* remove the rectangular hover background; keep only the underline animation */
+  background: transparent;
+}
+
+/* Accessible focus ring for keyboard users */
+.navbar-center a:focus-visible,
+.navbar-right a:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.12);
+  outline-offset: 3px;
 }
 
 .large-rounded-rectangle {
@@ -330,6 +371,17 @@ h6 {
   font-family: "Poppins", Arial, sans-serif;
   font-size: 1em;
   transition: background 0.2s;
+}
+
+.tagline-below-navbar {
+  max-width: 96vw;
+  margin: 38px auto 0 auto;
+  padding-left: 2vw;
+  font-family: "Georgia Pro", Georgia, serif;
+  font-size: 5em;
+  font-weight: 200;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
 }
 
 .lang-menu a:hover {
@@ -1441,4 +1493,168 @@ h6 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Footer: full-bleed red block after Issues section */
+.footer-right {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: #ffffff;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 40px 0;
+}
+.footer-right .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footer-right .footer-links a {
+  color: inherit;
+  opacity: 0.95;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+/* Footer specific layout and typography */
+.footer-left .site-name {
+  margin: 0 0 6px 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.footer-left .site-desc {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.95;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.footer-right-columns {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* Footer bottom area (divider + socials) */
+.footer-bottom {
+  margin-top: 24px;
+}
+.footer-bottom .footer-bottom-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.footer-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+  flex: 1 1 auto;
+  margin-right: 18px;
+}
+.footer-socials {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex: 0 0 auto;
+}
+.social-link {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  text-decoration: none;
+  transition: background 0.18s, transform 0.12s;
+}
+.social-link svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  color: inherit;
+}
+.social-link:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+/* Footer blurb styling (Georgia on the left) */
+.footer-left .footer-blurb {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.95);
+  font-family: "Georgia Pro", Georgia, serif;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  max-width: 520px;
+}
+
+.footer-col h4 {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 700;
+}
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-col li {
+  margin-bottom: 8px;
+}
+.footer-col a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 500;
+}
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-right .container {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  .footer-right .footer-links {
+    display: flex;
+    gap: 12px;
+  }
+  .footer-right-columns {
+    width: 100%;
+    justify-content: center;
+    gap: 24px;
+  }
+  .footer-col ul {
+    text-align: center;
+  }
+  .footer-bottom .footer-bottom-inner {
+    flex-direction: column-reverse;
+    gap: 12px;
+    align-items: center;
+  }
+  .footer-divider {
+    width: 90%;
+    margin-right: 0;
+    order: 2;
+  }
+  .footer-socials {
+    order: 1;
+  }
 }
