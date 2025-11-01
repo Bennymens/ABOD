@@ -573,6 +573,29 @@ nav.navbar .navbar-right a.active::after,
   letter-spacing: 0.5px;
 }
 
+/* Slight left offset for the tagline block so it aligns more closely with the
+   logo/content column. Reduces the left inset from the centered layout. */
+.tagline-row {
+  /* Align tagline under the ABOD logo by matching the navbar left padding (30px).
+     Use margin-left:30px so the tagline's left edge sits beneath the logo. */
+  max-width: calc(100% - 30px);
+  margin: 18px 0 0 30px; /* top right bottom left */
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+/* Page-scoped override: on services page, ensure the tagline is left-aligned
+   under the logo (override any global centering rules). */
+.services-page .tagline-below-navbar {
+  margin: 0 !important;
+  padding-left: 0 !important;
+  text-align: left !important;
+  max-width: none !important;
+}
+
 @media (max-width: 768px) {
   /* Responsively reduce tagline/subtext sizes for small screens */
   .tagline-below-navbar {
@@ -1260,11 +1283,12 @@ nav.navbar .navbar-right a.active::after,
   position: fixed;
   top: 0;
   right: -100%;
-  width: 250px;
+  /* allow the panel to grow on larger phones but stay usable on small screens */
+  width: min(320px, 82vw);
   height: 100vh;
-  background: white;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
-  transition: right 0.3s ease;
+  background: #fff;
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
+  transition: right 0.28s cubic-bezier(0.23, 1, 0.32, 1);
   z-index: 1000;
   padding: 80px 20px 20px;
   overflow-y: auto;
@@ -1281,17 +1305,23 @@ nav.navbar .navbar-right a.active::after,
 }
 
 .mobile-nav-links li {
-  margin: 15px 0;
+  margin: 12px 0;
 }
 
 .mobile-nav-links a {
   text-decoration: none;
-  color: #333;
-  font-size: 1.1em;
-  font-weight: 500;
+  color: #222;
+  font-size: 1.15rem; /* slightly larger for tap targets */
+  font-weight: 600;
   display: block;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
+  padding: 14px 4px; /* increased vertical padding for easier tapping */
+  border-bottom: 1px solid #f1f1f1;
+  transition: background 0.12s, color 0.12s;
+}
+.mobile-nav-links a:active,
+.mobile-nav-links a:hover {
+  background: rgba(0, 0, 0, 0.03);
+  color: #111;
 }
 
 .mobile-search {
@@ -1886,6 +1916,11 @@ nav.navbar .navbar-right a.active::after,
   width: 100vw;
   box-sizing: border-box;
   padding: 40px 0;
+}
+/* Ensure footer is pushed to the bottom when page content is short
+   (works with body set as a column flex container and .site-main flex:1). */
+.footer-right {
+  margin-top: auto;
 }
 .footer-right .container {
   max-width: 1200px;

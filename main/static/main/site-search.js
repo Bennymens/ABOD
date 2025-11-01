@@ -125,6 +125,8 @@ if (window.__site_search_installed) {
     // if already exists, toggle
     var existing = document.getElementById("search-bar");
     if (existing) {
+      // ensure existing matches our standard structure
+      ensureStandardSearch(existing);
       existing.classList.toggle("active");
       var inp = existing.querySelector("input");
       if (inp) inp.focus();
@@ -134,10 +136,28 @@ if (window.__site_search_installed) {
     var nav = document.querySelector("nav.navbar");
     if (!nav) return;
 
+    var built = buildStandardSearch();
+    var wrapper = built.wrapper;
+    var input = built.input;
+
+    // insert after navbar
+    nav.parentNode.insertBefore(wrapper, nav.nextSibling);
+
+    // animate in
+    requestAnimationFrame(function () {
+      wrapper.classList.add("active");
+    });
+
+    setTimeout(function () {
+      input.focus();
+    }, 120);
+  }
+
+  function buildStandardSearch() {
     var wrapper = document.createElement("div");
     wrapper.id = "search-bar";
     wrapper.className =
-      "results-search-wrapper navbar-results-search in-flow-search active";
+      "results-search-wrapper navbar-results-search search-bar full-bleed in-flow-search";
     wrapper.style.width = "100%";
     wrapper.style.boxSizing = "border-box";
 
@@ -185,11 +205,24 @@ if (window.__site_search_installed) {
     form.appendChild(bar);
     wrapper.appendChild(form);
 
-    // insert after navbar
-    nav.parentNode.insertBefore(wrapper, nav.nextSibling);
-    setTimeout(function () {
-      input.focus();
-    }, 50);
+    return { wrapper: wrapper, input: input };
+  }
+
+  function ensureStandardSearch(el) {
+    // If element already looks correct, do nothing
+    if (
+      el.classList.contains("results-search-wrapper") &&
+      el.querySelector &&
+      el.querySelector(".results-search-bar")
+    ) {
+      return;
+    }
+
+    // Otherwise, replace it with our standard structure while keeping any
+    // existing JS references stable by replacing in-place.
+    var built = buildStandardSearch();
+    el.parentNode.replaceChild(built.wrapper, el);
+    return built.wrapper;
   }
 
   document.addEventListener("click", function (e) {
@@ -197,17 +230,75 @@ if (window.__site_search_installed) {
       e.target.closest && e.target.closest('.icon-link[title="Search"]');
     if (target) {
       e.preventDefault();
-      // If the page has a visible search bar with id "search-bar", toggle that instead
-      const pageSearch = document.getElementById("search-bar");
-      if (pageSearch) {
-        pageSearch.classList.toggle("active");
-        const inp = pageSearch.querySelector("input");
-        if (inp) inp.focus();
-        return;
-      }
-
-      // create an in-flow search bar under the navbar so all pages share the same UI
+      // Delegate to createInFlowSearch which handles both toggling an existing
+      // search bar and creating/animating a new one with the standard markup.
       createInFlowSearch();
     }
   });
+
+  // Install a site-wide hamburger/mobile menu toggle so every page that includes
+  // this script gets consistent behavior (no inline JS required in templates).
+  if (!window.__hamburger_installed) {
+    window.__hamburger_installed = true;
+
+    function closeMobileMenu(hamburger, mobileMenu) {
+      if (hamburger) hamburger.classList.remove("active");
+      if (mobileMenu) mobileMenu.classList.remove("open");
+      const overlay = document.getElementById("mobile-overlay");
+      if (overlay) overlay.remove();
+    }
+
+    function openMobileMenu(hamburger, mobileMenu) {
+      if (hamburger) hamburger.classList.add("active");
+      if (mobileMenu) mobileMenu.classList.add("open");
+      // add semi-opaque overlay to indicate modal state and capture clicks
+      let overlay = document.getElementById("mobile-overlay");
+      if (!overlay) {
+        overlay = document.createElement("div");
+        overlay.id = "mobile-overlay";
+        overlay.style.position = "fixed";
+        overlay.style.top = "0";
+        overlay.style.left = "0";
+        overlay.style.width = "100vw";
+        overlay.style.height = "100vh";
+        overlay.style.background = "rgba(0,0,0,0.35)";
+        overlay.style.zIndex = "999";
+        overlay.style.backdropFilter = "blur(2px)";
+        document.body.appendChild(overlay);
+        overlay.addEventListener("click", () =>
+          closeMobileMenu(hamburger, mobileMenu)
+        );
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (!hamburger || !mobileMenu) return;
+
+      // ensure clicking the hamburger toggles the menu
+      hamburger.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (hamburger.classList.contains("active")) {
+          closeMobileMenu(hamburger, mobileMenu);
+        } else {
+          openMobileMenu(hamburger, mobileMenu);
+        }
+      });
+
+      // close when clicking a nav link inside the mobile menu
+      mobileMenu.querySelectorAll &&
+        mobileMenu.querySelectorAll(".mobile-nav-links a").forEach((link) => {
+          link.addEventListener("click", function () {
+            closeMobileMenu(hamburger, mobileMenu);
+          });
+        });
+
+      // close on escape
+      document.addEventListener("keydown", function (ev) {
+        if (ev.key === "Escape") closeMobileMenu(hamburger, mobileMenu);
+      });
+    });
+  }
 }

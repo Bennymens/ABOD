@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Markets — ABOD</title>
+  <title>Services — ABOD</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="{% static 'main/style.css' %}" />
   </head>
-  <body>
+  <body class="services-page">
     <nav class="navbar">
       <div class="navbar-left-group">
         <div
@@ -27,6 +27,7 @@
               style="height: 40px"
             />
           </a>
+          
         </div>
         <ul class="navbar-section navbar-center">
           <li><a href="{% url 'markets' %}" {% if request.resolver_match.url_name == 'markets' %}class="active"{% endif %}>Markets</a></li>
@@ -103,6 +104,19 @@
         <span></span><span></span><span></span>
       </div>
     </nav>
+    
+  <!-- Tagline below the navbar (Georgia font) -->
+  <div class="tagline-row">
+    <div class="tagline-below-navbar">
+      Explore our services across the built and
+      <div class="tagline-bottom-row">
+        <div class="tagline-last-line">environments</div>
+       
+    </div>
+    </div>
+  </div>
+
+  <main class="site-main">
 
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobile-menu">
@@ -126,9 +140,11 @@
         <a href="?lang=en">English</a><a href="?lang=fr">French</a
         ><a href="?lang=de">German</a>
       </div>
-    </div>
+  </div>
 
-    <!-- Footer: full-bleed red block after Issues section -->
+  </main>
+
+  <!-- Footer: full-bleed red block after Issues section -->
     <footer class="footer-right">
       <div class="container footer-inner">
         <div class="footer-left">

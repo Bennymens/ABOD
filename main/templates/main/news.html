@@ -4,7 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Markets — ABOD</title>
+  {% if page_title %}
+  <title>{{ page_title }} — ABOD</title>
+  {% else %}
+  <title>News — ABOD</title>
+  {% endif %}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -104,8 +108,9 @@
       </div>
     </nav>
 
-    <!-- Mobile menu -->
-    <div class="mobile-menu" id="mobile-menu">
+  <!-- Mobile menu -->
+  <main class="site-main">
+  <div class="mobile-menu" id="mobile-menu">
       <ul class="mobile-nav-links">
         <li><a href="{% url 'markets' %}" {% if request.resolver_match.url_name == 'markets' %}class="active"{% endif %}>Markets</a></li>
         <li><a href="{% url 'services' %}" {% if request.resolver_match.url_name == 'services' %}class="active"{% endif %}>Services</a></li>
@@ -128,8 +133,9 @@
       </div>
     </div>
 
-    <!-- Footer: full-bleed red block after Issues section -->
-    <footer class="footer-right">
+  </main>
+  <!-- Footer: full-bleed red block after Issues section -->
+  <footer class="footer-right">
       <div class="container footer-inner">
         <div class="footer-left">
           <h3 class="site-name">ABOD</h3>

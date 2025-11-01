@@ -4,7 +4,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Search results</title>
+  {% if page_title %}
+  <title>{{ page_title }} — ABOD</title>
+  {% else %}
+  <title>Search results — ABOD</title>
+  {% endif %}
     <link rel="stylesheet" href="{% static 'main/style.css' %}" />
   </head>
   <body>

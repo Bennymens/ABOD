@@ -4,7 +4,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+  {% if page_title %}
+  <title>{{ page_title }} — ABOD</title>
+  {% else %}
+  <title>Home — ABOD</title>
+  {% endif %}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -127,15 +131,21 @@
 
     <!-- Main content wrapper so footer can be pushed to the bottom -->
     <main class="site-main">
-      <form
-        id="search-bar"
-        class="search-bar"
-        action="{% url 'search' %}"
-        method="get"
-      >
-        <input type="text" name="q" placeholder="Search..." required />
-        <button type="submit">Search</button>
-      </form>
+      <!-- Use the same results-style in-flow search bar as the search results page -->
+  <div id="search-bar" class="results-search-wrapper navbar-results-search search-bar full-bleed">
+        <form action="{% url 'search' %}" method="get" class="results-search-form">
+          <div class="results-search-bar">
+            <button type="submit" class="results-search-submit" aria-label="Submit search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                <line x1="16.5" y1="16.5" x2="21" y2="21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            <input type="text" name="q" placeholder="search ABOD" aria-label="Search ABOD" />
+            <button type="button" class="results-search-clear" aria-label="Clear search">×</button>
+          </div>
+        </form>
+      </div>
 
       <div class="tagline-below-navbar" id="dynamic-tagline">
         we are making innovation sustainable
@@ -682,21 +692,7 @@
           observer.observe(el);
         });
 
-        // Hamburger menu toggle
-        const hamburger = document.getElementById("hamburger");
-        const mobileMenu = document.getElementById("mobile-menu");
-        hamburger.addEventListener("click", () => {
-          hamburger.classList.toggle("active");
-          mobileMenu.classList.toggle("open");
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll(".mobile-nav-links a").forEach((link) => {
-          link.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            mobileMenu.classList.remove("open");
-          });
-        });
+        // mobile menu behavior is centralized in main/site-search.js
       });
     </script>
     <script src="{% static 'main/site-search.js' %}"></script>
