@@ -143,6 +143,10 @@ nav.navbar {
   justify-content: space-between;
   padding: 10px 30px;
 }
+/* make navbar a positioning context for the search bar we place under the logo */
+nav.navbar {
+  position: relative;
+}
 
 .navbar-left-group {
   display: flex;
@@ -239,6 +243,24 @@ h6 {
   outline-offset: 3px;
 }
 
+/* Active/Current page nav link styling (higher specificity + safe fallback)
+   This ensures the active link color overrides other link color rules. */
+nav.navbar .navbar-center a.active,
+nav.navbar .navbar-right a.active,
+.mobile-menu .mobile-nav-links a.active,
+.mobile-nav-links a.active {
+  color: #e67e22 !important; /* orange */
+  font-weight: 600;
+}
+
+/* Keep the underline visible for the active link (force visible) */
+nav.navbar .navbar-center a.active::after,
+nav.navbar .navbar-right a.active::after,
+.mobile-menu .mobile-nav-links a.active::after,
+.mobile-nav-links a.active::after {
+  transform: scaleX(1) !important;
+}
+
 .large-rounded-rectangle {
   width: 96vw;
   max-width: 1800px;
@@ -322,6 +344,173 @@ h6 {
 
 .search-bar button:hover {
   background: #444;
+}
+
+/* Results page: long thin search line with X and magnifier */
+.results-search-wrapper {
+  width: 100%;
+  margin: 6px 0 18px 0;
+  position: relative;
+  left: 0;
+}
+.results-search-form {
+  width: 100%;
+}
+.results-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: transparent;
+  border-bottom: 2px solid #ddd;
+  padding: 8px 6px; /* small padding so the line reaches near edges */
+}
+.navbar-results-search {
+  /* when used as absolute this was the old behavior; keep minimal defaults */
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.results-search-bar input[type="text"] {
+  flex: 1 1 auto;
+  border: none;
+  outline: none;
+  font-size: 1.25rem; /* larger font for placeholder and input text */
+  background: transparent;
+  padding: 8px 12px 6px 12px;
+  color: #222;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* Results list anchored to the right of the navbar (no container) */
+.results-list {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 1;
+  display: block;
+  margin: 10px 0 24px 0;
+}
+
+.search-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  text-decoration: none;
+  color: #222;
+  padding: 20px 28px;
+  border-bottom: 2px solid #ddd; /* long line stretching to page end */
+  position: relative;
+}
+
+.search-result:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.search-result .result-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #111;
+}
+
+.search-result .result-source {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+.result-left {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.result-right {
+  flex: 0 0 auto;
+  margin-left: 12px;
+}
+
+.search-result .result-divider {
+  display: none; /* no extra divider; using border-bottom on .search-result */
+}
+
+/* Hover arrow on the far right */
+.search-result .arrow {
+  opacity: 0;
+  transform: translateX(8px);
+  transition: transform 180ms ease, opacity 180ms ease;
+  color: #888;
+  font-size: 20px;
+  /* remove any circular background or border that might appear */
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  display: inline-block;
+  line-height: 1;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.search-result:hover .arrow {
+  transform: translateX(0);
+  opacity: 1;
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  .results-list {
+    left: 12px;
+    width: calc(100% - 24px);
+    max-width: 100%;
+  }
+}
+.results-search-bar input::placeholder {
+  color: #222;
+  opacity: 0.45; /* reduced opacity for placeholder */
+}
+.results-search-clear,
+.results-search-submit {
+  background: transparent;
+  border: none;
+  color: #444;
+  cursor: pointer;
+  padding: 6px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.results-search-submit {
+  margin-left: 2px;
+  color: #222;
+}
+.results-search-clear {
+  font-size: 22px;
+  line-height: 1;
+  color: #888;
+  margin-left: auto; /* push the clear button to the far right */
+}
+.results-search-clear:hover {
+  color: #444;
+}
+.results-search-submit svg {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .results-search-bar input[type="text"] {
+    font-size: 1rem;
+  }
+  .results-search-clear {
+    font-size: 20px;
+  }
 }
 
 /* Dropdown for language */

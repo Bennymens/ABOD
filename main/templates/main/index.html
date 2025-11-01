@@ -16,30 +16,23 @@
   <body>
     <nav class="navbar">
       <div class="navbar-left-group">
-        <div
-          class="navbar-section navbar-logo"
-          style="display: flex; align-items: center; gap: 18px"
-        >
-          <a href="/">
-            <img
-              src="{% static 'main/img/logo.jpg' %}"
-              alt="Company Logo"
-              style="height: 40px"
-            />
+        <div class="navbar-section navbar-logo" style="display: flex; align-items: center; gap: 18px">
+          <a href="{% url 'home' %}">
+            <img src="{% static 'main/img/logo.jpg' %}" alt="Company Logo" style="height: 40px" />
           </a>
         </div>
         <ul class="navbar-section navbar-center">
-          <li><a href="/markets/">Markets</a></li>
-          <li><a href="/services/">Services</a></li>
-          <li><a href="/projects/">Projects</a></li>
-          <li><a href="/insights/">Insights</a></li>
+          <li><a href="{% url 'markets' %}" {% if request.resolver_match.url_name == 'markets' %}class="active"{% endif %}>Markets</a></li>
+          <li><a href="{% url 'services' %}" {% if request.resolver_match.url_name == 'services' %}class="active"{% endif %}>Services</a></li>
+          <li><a href="{% url 'projects' %}" {% if request.resolver_match.url_name == 'projects' %}class="active"{% endif %}>Projects</a></li>
+          <li><a href="{% url 'insights' %}" {% if request.resolver_match.url_name == 'insights' %}class="active"{% endif %}>Insights</a></li>
         </ul>
       </div>
       <ul class="navbar-section navbar-right">
-        <li><a href="/about/">About</a></li>
-        <li><a href="/careers/">Careers</a></li>
-        <li><a href="/news/">News</a></li>
-        <li><a href="/contact/">Contact</a></li>
+        <li><a href="{% url 'about' %}" {% if request.resolver_match.url_name == 'about' %}class="active"{% endif %}>About</a></li>
+        <li><a href="{% url 'careers' %}" {% if request.resolver_match.url_name == 'careers' %}class="active"{% endif %}>Careers</a></li>
+        <li><a href="{% url 'news' %}" {% if request.resolver_match.url_name == 'news' %}class="active"{% endif %}>News</a></li>
+        <li><a href="{% url 'contact' %}" {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}>Contact</a></li>
         <li class="language-dropdown">
           <a href="#" title="Language" class="icon-link" id="lang-toggle">
             <!-- Globe SVG icon -->
@@ -110,14 +103,14 @@
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobile-menu">
       <ul class="mobile-nav-links">
-        <li><a href="/markets/">Markets</a></li>
-        <li><a href="/services/">Services</a></li>
-        <li><a href="/projects/">Projects</a></li>
-        <li><a href="/insights/">Insights</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/careers/">Careers</a></li>
-        <li><a href="/news/">News</a></li>
-        <li><a href="/contact/">Contact</a></li>
+        <li><a href="{% url 'markets' %}" {% if request.resolver_match.url_name == 'markets' %}class="active"{% endif %}>Markets</a></li>
+        <li><a href="{% url 'services' %}" {% if request.resolver_match.url_name == 'services' %}class="active"{% endif %}>Services</a></li>
+        <li><a href="{% url 'projects' %}" {% if request.resolver_match.url_name == 'projects' %}class="active"{% endif %}>Projects</a></li>
+        <li><a href="{% url 'insights' %}" {% if request.resolver_match.url_name == 'insights' %}class="active"{% endif %}>Insights</a></li>
+        <li><a href="{% url 'about' %}" {% if request.resolver_match.url_name == 'about' %}class="active"{% endif %}>About</a></li>
+        <li><a href="{% url 'careers' %}" {% if request.resolver_match.url_name == 'careers' %}class="active"{% endif %}>Careers</a></li>
+        <li><a href="{% url 'news' %}" {% if request.resolver_match.url_name == 'news' %}class="active"{% endif %}>News</a></li>
+        <li><a href="{% url 'contact' %}" {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}>Contact</a></li>
       </ul>
       <div class="mobile-search">
         <form action="{% url 'search' %}" method="get">
@@ -163,7 +156,9 @@
       <p class="below-rectangle-subtext slide-up">
         Our experts are leading the way
       </p>
-      <a href="/Servi/" class="below-rectangle-link slide-up">Services</a>
+      <a href="{% url 'services' %}" class="below-rectangle-link slide-up"
+        >Services</a
+      >
 
       <h2 class="section-header slide-up">Building Information Modeling</h2>
       <p class="section-subtext slide-up">
@@ -301,7 +296,7 @@
         </div>
         <div class="card-link" style="text-align: center; padding: 20px">
           <a
-            href="/issues/"
+            href="{% url 'insights' %}"
             style="
               opacity: 0.45;
               text-decoration: none;
@@ -438,7 +433,7 @@
             <div class="card-content">
               <span class="card-label">Issue</span>
               <h2 class="card-title">
-                How do we protect our cities from rising temperatures?
+                How do we create climate-resilient, energy-efficient buildings?
               </h2>
             </div>
           </a>
@@ -452,7 +447,7 @@
             <div class="card-content">
               <span class="card-label">Issue</span>
               <h2 class="card-title">
-                How do countries unlock the value of high-speed rail?
+                How do we tackle high-end, technically challenging developments?
               </h2>
             </div>
           </a>
@@ -466,7 +461,7 @@
             <div class="card-content">
               <span class="card-label">Issue</span>
               <h2 class="card-title">
-                How do we regenerate former industrial communities?
+                How do we Prioritize inclusive, user-focused solutions?
               </h2>
             </div>
           </a>
@@ -623,19 +618,8 @@
             }
           });
 
-        // Show search bar with drop-down animation
-        document
-          .querySelector('.icon-link[title="Search"]')
-          .addEventListener("click", function (e) {
-            e.preventDefault();
-            const bar = document.getElementById("search-bar");
-            if (!bar.classList.contains("active")) {
-              bar.classList.add("active");
-              bar.querySelector("input").focus();
-            } else {
-              bar.classList.remove("active");
-            }
-          });
+        // Search icon click is handled globally by main/site-search.js
+        // (Removed the inline handler to avoid duplicate/timing conflicts.)
 
         // Language dropdown toggle
         const langToggle = document.getElementById("lang-toggle");
@@ -715,5 +699,6 @@
         });
       });
     </script>
+    <script src="{% static 'main/site-search.js' %}"></script>
   </body>
 </html>

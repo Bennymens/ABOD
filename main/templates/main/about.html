@@ -29,17 +29,17 @@
           </a>
         </div>
         <ul class="navbar-section navbar-center">
-          <li><a href="{% url 'markets' %}">Markets</a></li>
-          <li><a href="{% url 'services' %}">Services</a></li>
-          <li><a href="{% url 'projects' %}">Projects</a></li>
-          <li><a href="{% url 'insights' %}">Insights</a></li>
+          <li><a href="{% url 'markets' %}" {% if request.resolver_match.url_name == 'markets' %}class="active"{% endif %}>Markets</a></li>
+          <li><a href="{% url 'services' %}" {% if request.resolver_match.url_name == 'services' %}class="active"{% endif %}>Services</a></li>
+          <li><a href="{% url 'projects' %}" {% if request.resolver_match.url_name == 'projects' %}class="active"{% endif %}>Projects</a></li>
+          <li><a href="{% url 'insights' %}" {% if request.resolver_match.url_name == 'insights' %}class="active"{% endif %}>Insights</a></li>
         </ul>
       </div>
       <ul class="navbar-section navbar-right">
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'careers' %}">Careers</a></li>
-        <li><a href="{% url 'news' %}">News</a></li>
-        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'about' %}" {% if request.resolver_match.url_name == 'about' %}class="active"{% endif %}>About</a></li>
+        <li><a href="{% url 'careers' %}" {% if request.resolver_match.url_name == 'careers' %}class="active"{% endif %}>Careers</a></li>
+        <li><a href="{% url 'news' %}" {% if request.resolver_match.url_name == 'news' %}class="active"{% endif %}>News</a></li>
+        <li><a href="{% url 'contact' %}" {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}>Contact</a></li>
         <li class="language-dropdown">
           <a href="#" title="Language" class="icon-link" id="lang-toggle">
             <!-- Globe SVG icon -->
@@ -114,14 +114,14 @@
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobile-menu">
       <ul class="mobile-nav-links">
-        <li><a href="{% url 'markets' %}">Markets</a></li>
-        <li><a href="{% url 'services' %}">Services</a></li>
-        <li><a href="{% url 'projects' %}">Projects</a></li>
-        <li><a href="{% url 'insights' %}">Insights</a></li>
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'careers' %}">Careers</a></li>
-        <li><a href="{% url 'news' %}">News</a></li>
-        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'markets' %}" {% if request.resolver_match.url_name == 'markets' %}class="active"{% endif %}>Markets</a></li>
+        <li><a href="{% url 'services' %}" {% if request.resolver_match.url_name == 'services' %}class="active"{% endif %}>Services</a></li>
+        <li><a href="{% url 'projects' %}" {% if request.resolver_match.url_name == 'projects' %}class="active"{% endif %}>Projects</a></li>
+        <li><a href="{% url 'insights' %}" {% if request.resolver_match.url_name == 'insights' %}class="active"{% endif %}>Insights</a></li>
+        <li><a href="{% url 'about' %}" {% if request.resolver_match.url_name == 'about' %}class="active"{% endif %}>About</a></li>
+        <li><a href="{% url 'careers' %}" {% if request.resolver_match.url_name == 'careers' %}class="active"{% endif %}>Careers</a></li>
+        <li><a href="{% url 'news' %}" {% if request.resolver_match.url_name == 'news' %}class="active"{% endif %}>News</a></li>
+        <li><a href="{% url 'contact' %}" {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}>Contact</a></li>
       </ul>
       <div class="mobile-search">
         <form action="{% url 'search' %}" method="get">
@@ -268,5 +268,6 @@
         }
       });
     </script>
+    <script src="{% static 'main/site-search.js' %}"></script>
   </body>
 </html>
